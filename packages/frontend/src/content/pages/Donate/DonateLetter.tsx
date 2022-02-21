@@ -4,7 +4,7 @@ export function DonateLetter() {
     return (
         <article className="DonateLetter">
             <p>
-                Thank you for your consideration in donating to ve Market Cap - your donation supports our efforts to
+                Thank you for your consideration in donating to veMarketCap - your donation supports our efforts to
                 bring more awareness about the voting escrow (veCRV) model to the DeFi space.
             </p>
             <p>

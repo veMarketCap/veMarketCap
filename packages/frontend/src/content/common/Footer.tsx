@@ -7,7 +7,7 @@ export function Footer() {
     return (
         <footer className="Footer">
             <p className="Footer-Text">
-                ve Market Cap is made by a volunteer effort. TVL is provided by the lovely defi lama. If you find errors
+                veMarketCap is made by a volunteer effort. TVL is provided by the lovely defi lama. If you find errors
                 on the website, please join the discord to report.
             </p>
             <ul className="Footer-Links">

@@ -1,6 +1,6 @@
 # veMarketCap 💓
 
-veMarketCap ve Market Cap is a on chain tracking website focus on projects adopts voting escrow tokenecmoics (veCRV) model. We provide a relevant info for all the projects who adopt and going to adopte ve model.
+veMarketCap veMarketCap is a on chain tracking website focus on projects adopts voting escrow tokenecmoics (veCRV) model. We provide a relevant info for all the projects who adopt and going to adopte ve model.
 
 You can visit the site yourself at https://vemarketcap.com/.
 

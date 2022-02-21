@@ -4,7 +4,7 @@ export function getPageMetadata(): PageMetadata {
   return {
     title: 'veMarketCap - veToken Ecosystem Dashboard',
     description:
-      've Market Cap is a on chain tracking website focus on projects adopts voting escrow tokenecmoics (veCRV) model. We provide a relevant info for all the projects who adopt and going to adopte ve model.',
+      'veMarketCap is an on-chain tracking website, focused on projects that adopt the voting escrow tokenomics (veCRV) model, created by Michael Egorov of Curve Finance. We provide relevant info for all projects who adopt, and are going to adopt, the ve-model.',
     image: 'https://vemarketcap.com/meta-images/overview.png',
     url: 'https://vemarketcap.com/',
   }

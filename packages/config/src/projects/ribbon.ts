@@ -25,7 +25,7 @@ export const ribbon: Project = {
             'Ribbon Finance is thinking about the possibility to incentivize the different vaults in the same way Curve does for their liquidity pools. The total number of incentives a certain vault receives, depends on the gauge weight this vault has. If the amount of gauge weight increases, so will the rewards that a certain vault receivesl.',
             'If you don’t want to vote as a user, you also have the possibility to delegate your vote.'
         ],
-        rewards: 'The holders of veRBN will get up to a 2.5x boost of the RBN emission for depositing their funds into the vault. There will also be protocol sharing fee, but the exact percentage that will go to veRB holders is yet to be determined at the time of writing.',
+        rewards: 'The holders of veRBN will get up to a 2.5x boost of the RBN emission for depositing their funds into the vault. There will also be protocol sharing fee, but the exact percentage that will go to veRBN holders is yet to be determined at the time of writing.',
         purpose: 'Exchange',
         status: 'In progress',
         links: {

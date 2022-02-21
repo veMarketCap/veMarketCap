@@ -5,9 +5,9 @@ import {Heading} from '../../../common'
 export function About() {
     return (
         <section className="About">
-            <Heading level={2} id="about" title="About ve Market Cap"/>
+            <Heading level={2} id="about" title="About veMarketCap"/>
             <p>
-                ve Market Cap is an on-chain tracking website, focused on projects that adopt the voting escrow
+                veMarketCap is an on-chain tracking website, focused on projects that adopt the voting escrow
                 tokenomics (veCRV) model, created by Michael Egorov of Curve Finance. We provide relevant info for all
                 projects who adopt, and are going to adopt, the ve-model.
             </p>
@@ -33,7 +33,7 @@ export function About() {
                 AMM, yield, or lending protocol.
             </p>
             <p>
-                There will be more features added in the future, and we hope you find ve Market Cap to be a valuable
+                There will be more features added in the future, and we hope you find veMarketCap to be a valuable
                 resource for you.
             </p>
         </section>
