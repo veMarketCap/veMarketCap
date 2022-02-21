@@ -18,7 +18,7 @@ export function Navbar() {
       <nav className="Navbar">
         <a href="/">
           {/*<Logo className="Navbar-Logo" />*/}
-          <img src="/Transparent/1/3.png" width={'200px'}/>
+          <img src="/Transparent/veMarketCaplogo2transparente.png" className='Navbar-Logo'/>
         </a>
         <ul className="Navbar-Links left">
           <li className="Navbar-Link">

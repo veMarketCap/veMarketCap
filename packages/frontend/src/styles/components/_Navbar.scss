@@ -21,6 +21,8 @@
   margin-right: 24px;
   position: relative;
   top: -2px;
+  max-width: 114px;
+  height: auto;
 
   @media (max-width: 550px) {
     min-width: 60px;

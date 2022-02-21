@@ -40,7 +40,7 @@ export function Chart({endpoint, tokens, days = 90}: ChartProps) {
                     <div className="Chart-Label">...</div>
                 </div>
                 {/*<Logo className="Chart-Watermark" />*/}
-                <img src="/Transparent/1/3.png" className="Chart-Watermark" />
+                <img src="/Transparent/veMarketCaplogo2transparente.png" className="Chart-Watermark" />
                 <canvas className="Chart-Canvas"/>
             </div>
             <div className="Chart-CurrencyControls">
