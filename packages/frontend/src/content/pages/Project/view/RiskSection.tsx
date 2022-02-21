@@ -1,4 +1,4 @@
-import { ProjectRiskCategory } from '@l2beat/config'
+import { ProjectRiskCategory } from '@vemarketcap/config'
 import React from 'react'
 
 import { Section } from './Section'

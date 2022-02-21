@@ -1,49 +1,83 @@
-import { SimpleDate } from '@l2beat/common'
-import { projects, tokenList } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import {projects} from '@vemarketcap/config'
+import axios, {AxiosError} from "axios";
 import fs from 'fs'
 
-import { projectToInfo } from '../model'
-import { setup } from './services'
-import { makeMockData } from './tools/makeMockData'
-import { makeOutputData, OutputData } from './tools/makeOutputData'
+import {calculateAggregate} from './helpers'
 
-main().catch((e) => {
-  console.error(e)
-  process.exit(1)
-})
-
-async function main() {
-  const { statCollector, config, asyncCache } = setup()
-
-  const endDate = SimpleDate.today()
-  const projectInfos = projects.map(projectToInfo)
-
-  let outputData
-  if (config.mock) {
-    outputData = makeMockData(projectInfos, endDate)
-  } else {
-    const stats = await statCollector.collectStats(
-      projectInfos,
-      tokenList,
-      endDate
-    )
-    outputData = makeOutputData(stats)
-  }
-
-  await saveData(outputData)
-
-  if (config.updatePrecomputed) {
-    asyncCache.updatePrecomputed()
-  }
+let mappedData: any;
+let veTokenProjects: any = []
+const coinNames: Array<string> = projects.map((e: any) => e.slug);
+const datatypes: Array<string> = ["date", "usd", "eth"];
+const projectData: any = {
+    "byProject": {}
 }
 
-async function saveData(data: OutputData) {
-  if (!fs.existsSync('./build')) {
-    await fs.promises.mkdir('./build')
-  }
-  await fs.promises.writeFile(
-    './build/data.json',
-    JSON.stringify(data),
-    'utf-8'
-  )
+const fetchDefillamaData = async () => {
+    return new Promise((resolve, reject) => {
+        Promise.all(coinNames.map(async (item: any, i: any) => {
+            return axios.get('https://api.llama.fi/protocol/' + item)
+        })).then(res => {
+            res.forEach((e: any, i:number) => data(e.data, i))
+            resolve(res)
+        }).catch((error: AxiosError) => console.error(error))
+    })
+}
+
+const fetchVetokenData = async () => {
+    const res = await axios.get('https://model.vetoken.finance/v1/projects')
+    const projects = res.data
+
+    const arr: Array<string> = []
+    coinNames.forEach((coin ,index) => {
+        const found = projects.find((project: any) => project.name.toLowerCase() === coin.toLowerCase())
+
+        arr.push(found?.mcapTvl || 0)
+
+        console.log(coin, found?.mcapTvl || 0)
+    })
+
+    veTokenProjects = arr
+    // console.log('veTokenProjects', veTokenProjects)
+}
+
+const data = (coinData: any, index: number) => {
+    mappedData = coinData.tvl.map((e: any) => {
+        return [
+            new Date(e.date * 1000),
+            e.totalLiquidityUSD,
+            0
+        ]
+    })
+    // console.log('mappedData', coinData)
+    projectData.byProject[coinData.name] = {
+        aggregate: {
+            data: mappedData,
+            types: datatypes
+        },
+        chains: coinData.chains,
+        mcapTvl: veTokenProjects[index]
+    }
+}
+
+(async () => {
+    await fetchVetokenData()
+    await fetchDefillamaData()
+
+    const aggregate = calculateAggregate(projectData)
+    const data = Object.assign({}, projectData, {aggregate})
+
+    await saveData(data)
+})()
+
+async function saveData(data: any) {
+    if (!fs.existsSync('./build')) {
+        await fs.promises.mkdir('./build')
+    }
+    await fs.promises.writeFile(
+        './build/data.json',
+        JSON.stringify(data),
+        'utf-8'
+    )
 }

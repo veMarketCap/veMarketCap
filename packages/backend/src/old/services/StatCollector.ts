@@ -1,5 +1,5 @@
-import { SimpleDate } from '@l2beat/common'
-import { TokenInfo } from '@l2beat/config'
+import { SimpleDate } from '@vemarketcap/common'
+import { TokenInfo } from '@vemarketcap/config'
 
 import { ProjectInfo } from '../../model'
 import { ArbitrumStatChecker, ArbitrumStats } from './ArbitrumStatChecker'

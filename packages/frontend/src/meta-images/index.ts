@@ -1,4 +1,4 @@
-import { projects } from '@l2beat/config'
+import { projects } from '@vemarketcap/config'
 import express from 'express'
 import { Server } from 'http'
 import puppeteer from 'puppeteer'

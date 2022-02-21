@@ -1,11 +1,13 @@
-import { Project, ProjectRisk, ProjectRiskCategory } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { Project, ProjectRisk, ProjectRiskCategory } from '@vemarketcap/config'
 
 import { RiskSectionProps } from '../view/RiskSection'
 
 export function getRiskSection(project: Project): RiskSectionProps {
   const technology = project.details.technology
   const exits =
-    technology?.exitMechanisms.map((x, i) => ({
+    technology?.exitMechanisms.map((x:any, i:number) => ({
       id: `exit-mechanisms-${i + 1}`,
       value: x,
     })) ?? []
@@ -24,7 +26,7 @@ export function getRiskSection(project: Project): RiskSectionProps {
   const risks: (ProjectRisk & { referencedId: string })[] = []
   for (const { id, value } of sections) {
     if (value) {
-      risks.push(...value.risks.map((x) => ({ ...x, referencedId: id })))
+      risks.push(...value.risks.map((x:any) => ({ ...x, referencedId: id })))
     }
   }
   for (const risk of technology?.contracts.risks ?? []) {

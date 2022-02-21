@@ -1,5 +1,5 @@
-import l2Data from '@l2beat/backend'
-import { projects } from '@l2beat/config'
+import l2Data from '@vemarketcap/backend'
+import { projects } from '@vemarketcap/config'
 
 import { createApi } from './api'
 import { renderPages } from './pages'

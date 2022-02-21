@@ -1,4 +1,4 @@
-import { LogLevel, UnixTime } from '@l2beat/common'
+import { LogLevel, UnixTime } from '@vemarketcap/common'
 
 import { Config } from './Config'
 import { getEnv } from './getEnv'
@@ -20,7 +20,7 @@ export function getProductionConfig(): Config {
       safeBlockRefreshIntervalMs: 5 * 60 * 1000,
       safeBlockBlockOffset: 100n,
     },
-    // TODO: import from @l2beat/config
+    // TODO: import from @vemarketcap/config
     tokens: [],
   }
 }

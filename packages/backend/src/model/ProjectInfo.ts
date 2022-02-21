@@ -1,4 +1,4 @@
-import { getTokenBySymbol, Project, TokenInfo } from '@l2beat/config'
+import { getTokenBySymbol, Project, TokenInfo } from '@vemarketcap/config'
 
 export interface ProjectInfo {
   name: string

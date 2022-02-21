@@ -4,7 +4,7 @@ import {
   Logger,
   mock,
   UnixTime,
-} from '@l2beat/common'
+} from '@vemarketcap/common'
 import { expect } from 'earljs'
 import waitForExpect from 'wait-for-expect'
 

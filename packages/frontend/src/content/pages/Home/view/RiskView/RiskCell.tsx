@@ -1,4 +1,4 @@
-import { ProjectRiskViewEntry } from '@l2beat/config'
+import { ProjectRiskViewEntry } from '@vemarketcap/config'
 import cx from 'classnames'
 import React from 'react'
 

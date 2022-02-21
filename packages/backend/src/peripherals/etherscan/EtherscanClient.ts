@@ -4,7 +4,7 @@ import {
   RateLimiter,
   RequestTracker,
   UnixTime,
-} from '@l2beat/common'
+} from '@vemarketcap/common'
 
 import { HttpClient } from '../HttpClient'
 import { asBigIntFromString } from './asBigIntFromString'

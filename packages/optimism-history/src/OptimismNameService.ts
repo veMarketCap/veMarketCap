@@ -1,4 +1,4 @@
-import { Cache } from '@l2beat/common'
+import { Cache } from '@vemarketcap/common'
 import { providers, utils } from 'ethers'
 
 const coder = new utils.Interface([

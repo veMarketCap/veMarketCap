@@ -1,46 +1,55 @@
 import React from 'react'
 
-import { ContractsSection, ContractsSectionProps } from './ContractsSection'
+import {ContractsSection, ContractsSectionProps} from './ContractsSection'
 import {
-  DescriptionSection,
-  DescriptionSectionProps,
+    DescriptionSection,
+    DescriptionSectionProps,
 } from './DescriptionSection'
-import { LinkSection, LinkSectionProps } from './links/LinkSection'
-import { NewsSection, NewsSectionProps } from './NewsSection'
-import { ReferencesSection, ReferencesSectionProps } from './ReferencesSection'
-import { RiskSection, RiskSectionProps } from './RiskSection'
-import {
-  TechnologyIncomplete,
-  TechnologyIncompleteProps,
-} from './TechnologyIncomplete'
-import { TechnologySection, TechnologySectionProps } from './TechnologySection'
+import {LinkSection, LinkSectionProps} from './links/LinkSection'
+import {NewsSection, NewsSectionProps} from './NewsSection'
+import {ReferencesSection, ReferencesSectionProps} from './ReferencesSection'
+import {RiskSection, RiskSectionProps} from './RiskSection'
+import {TechnologyIncomplete, TechnologyIncompleteProps} from './TechnologyIncomplete'
+import {TechnologySection, TechnologySectionProps} from './TechnologySection'
+import {BenefitSectionProps, BenefitSection} from './BenefitSection'
+import {VotingSectionProps, VotingSection} from './VotingSection'
+import {GaugeWeightSectionProps, GaugeWeightSection} from './GaugeWeightSection'
+import {RewardSectionProps, RewardSection} from './RewardSection'
 
 export interface ProjectDetailsProps {
-  linkSection: LinkSectionProps
-  newsSection: NewsSectionProps
-  descriptionSection: DescriptionSectionProps
-  riskSection: RiskSectionProps
-  incomplete?: TechnologyIncompleteProps
-  sections: TechnologySectionProps[]
-  contractsSection: ContractsSectionProps
-  referencesSection: ReferencesSectionProps
+    linkSection: LinkSectionProps
+    newsSection: NewsSectionProps
+    descriptionSection: DescriptionSectionProps
+    riskSection: RiskSectionProps
+    incomplete?: TechnologyIncompleteProps
+    sections: TechnologySectionProps[]
+    contractsSection: ContractsSectionProps
+    referencesSection: ReferencesSectionProps
+    benefitSection: BenefitSectionProps
+    votingSection: VotingSectionProps
+    gaugeWeightSection: GaugeWeightSectionProps
+    rewardSection: RewardSectionProps
 }
 
 export function ProjectDetails(props: ProjectDetailsProps) {
-  return (
-    <main className="ProjectDetails">
-      <LinkSection {...props.linkSection} />
-      <NewsSection {...props.newsSection} />
-      <div className="ProjectDetails-Content">
-        <DescriptionSection {...props.descriptionSection} />
-        <RiskSection {...props.riskSection} />
-        {props.incomplete && <TechnologyIncomplete {...props.incomplete} />}
-        {props.sections.map((section) => (
-          <TechnologySection key={section.id} {...section} />
-        ))}
-        <ContractsSection {...props.contractsSection} />
-      </div>
-      <ReferencesSection {...props.referencesSection} />
-    </main>
-  )
+    return (
+        <main className="ProjectDetails">
+            <LinkSection {...props.linkSection} />
+            {/*<NewsSection {...props.newsSection} />*/}
+            <div className="ProjectDetails-Content">
+                <DescriptionSection {...props.descriptionSection} />
+                <BenefitSection {...props.benefitSection} />
+                <VotingSection {...props.votingSection} />
+                <GaugeWeightSection {...props.gaugeWeightSection} />
+                <RewardSection {...props.rewardSection} />
+                {/*<RiskSection {...props.riskSection} />*/}
+                {/*{props.incomplete && <TechnologyIncomplete {...props.incomplete} />}*/}
+                {/*{props.sections.map((section) => (*/}
+                {/*    <TechnologySection key={section.id} {...section} />*/}
+                {/*))}*/}
+                {/*<ContractsSection {...props.contractsSection} />*/}
+            </div>
+            <ReferencesSection {...props.referencesSection} />
+        </main>
+    )
 }

@@ -1,4 +1,4 @@
-import { Bytes, EthereumAddress, Exchange } from '@l2beat/common'
+import { Bytes, EthereumAddress, Exchange } from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { encodeBalanceOf } from '../../../../src/peripherals/exchanges/queries/balanceOf'

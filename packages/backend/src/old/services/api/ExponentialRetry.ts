@@ -1,4 +1,4 @@
-import { Logger, retry } from '@l2beat/common'
+import { Logger, retry } from '@vemarketcap/common'
 
 export interface RetryOptions {
   startTimeout: number

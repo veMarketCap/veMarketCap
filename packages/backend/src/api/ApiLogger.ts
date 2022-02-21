@@ -1,4 +1,4 @@
-import { Logger } from '@l2beat/common'
+import { Logger } from '@vemarketcap/common'
 import { Context, Next } from 'koa'
 
 export function createApiLogger(logger: Logger) {

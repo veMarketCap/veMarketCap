@@ -86,6 +86,6 @@ function getHoverElements(chart: HTMLElement) {
     contents: $('.ChartHover-Contents'),
     date: $('.ChartHover-Date'),
     valueA: $('.ChartHover-ValueA'),
-    valueB: $('.ChartHover-ValueB'),
+    valueB: '' /* $('.ChartHover-ValueB') */,
   }
 }

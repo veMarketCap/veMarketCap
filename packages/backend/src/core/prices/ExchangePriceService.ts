@@ -1,4 +1,4 @@
-import { AssetId, EthereumAddress, Exchange, Logger } from '@l2beat/common'
+import { AssetId, EthereumAddress, Exchange, Logger } from '@vemarketcap/common'
 
 import { Token } from '../../model'
 import {

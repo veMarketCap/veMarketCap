@@ -1,5 +1,5 @@
 {
-  "name": "@l2beat/arbitrum-check",
+  "name": "@vemarketcap/arbitrum-check",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@l2beat/common": "*",
+    "@vemarketcap/common": "*",
     "@types/node": "^16.11.11",
     "chalk": "^4.1.2",
     "dotenv": "^10.0.0",

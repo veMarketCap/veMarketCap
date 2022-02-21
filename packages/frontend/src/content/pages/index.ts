@@ -1,4 +1,4 @@
-import { Project as ProjectType } from '@l2beat/config'
+import { Project as ProjectType } from '@vemarketcap/config'
 
 import { L2Data } from '../L2Data'
 import { getDonatePage } from './Donate'

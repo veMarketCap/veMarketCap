@@ -1,4 +1,4 @@
-import { TokenInfo } from '@l2beat/config'
+import { TokenInfo } from '@vemarketcap/config'
 import { BigNumber } from 'ethers'
 
 import { ProjectInfo } from '../../../../model'

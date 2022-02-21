@@ -1,4 +1,4 @@
-import { Logger, RateLimiter } from '@l2beat/common'
+import { Logger, RateLimiter } from '@vemarketcap/common'
 import fetch from 'node-fetch'
 
 import { ExponentialRetry } from './ExponentialRetry'

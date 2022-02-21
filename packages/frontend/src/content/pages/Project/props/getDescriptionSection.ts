@@ -1,4 +1,6 @@
-import { Project } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { Project } from '@vemarketcap/config'
 
 import { DescriptionSectionProps } from '../view/DescriptionSection'
 import { getEditLink, getIssueLink } from './links'

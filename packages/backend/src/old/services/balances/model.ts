@@ -1,4 +1,4 @@
-import { SimpleDate } from '@l2beat/common'
+import { SimpleDate } from '@vemarketcap/common'
 import { BigNumber } from 'ethers'
 
 import { FetchedPrices } from '../prices/model'

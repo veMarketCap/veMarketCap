@@ -4,7 +4,7 @@ import {
   Exchange,
   Logger,
   mock,
-} from '@l2beat/common'
+} from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { AggregatePriceService } from '../../../src/core/prices/AggregatePriceService'

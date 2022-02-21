@@ -1,4 +1,4 @@
-import { getTokenBySymbol, TokenInfo } from '@l2beat/config'
+import { getTokenBySymbol, TokenInfo } from '@vemarketcap/config'
 import { utils } from 'ethers'
 
 import { ProjectInfo } from '../../../../../src/model'

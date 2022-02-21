@@ -1,4 +1,4 @@
-import { divOrZero } from '@l2beat/common'
+import { divOrZero } from '@vemarketcap/common'
 import { BigNumber } from 'ethers'
 
 import { ProjectInfo } from '../../../../model'

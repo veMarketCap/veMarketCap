@@ -5,7 +5,7 @@ import {
   HttpClient,
   mock,
   UnixTime,
-} from '@l2beat/common'
+} from '@vemarketcap/common'
 import { expect, mockFn } from 'earljs'
 
 import {

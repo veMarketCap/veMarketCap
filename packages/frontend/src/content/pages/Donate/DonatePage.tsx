@@ -4,7 +4,6 @@ import { Footer, Header, Navbar, Page } from '../../common'
 import { DonateDetails } from './DonateDetails'
 import { DonateLetter } from './DonateLetter'
 import { DonatePageProps } from './getProps'
-import { GitcoinButton } from './GitcoinButton'
 
 export function DonatePage(props: DonatePageProps) {
   return (
@@ -12,7 +11,6 @@ export function DonatePage(props: DonatePageProps) {
       <Navbar />
       <Header title={props.title} />
       <DonateLetter />
-      <GitcoinButton />
       <DonateDetails {...props.details} />
       <Footer />
     </Page>

@@ -1,4 +1,4 @@
-import { Logger, mock } from '@l2beat/common'
+import { Logger, mock } from '@vemarketcap/common'
 import { expect } from 'earljs'
 import { Response } from 'node-fetch'
 

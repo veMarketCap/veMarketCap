@@ -1,7 +1,8 @@
 export const config = {
-  twitterLink: 'https://twitter.com/l2beatcom',
-  discordLink: 'https://discord.gg/eaVKXPmtWk',
-  githubLink: 'https://github.com/l2beat/l2beat',
+  twitterLink: 'https://twitter.com/imJaqen',
+  discordLink: 'https://discord.gg/rBjtG5GyCb',
+  githubLink: 'https://github.com/veMarketCap',
+  veModelProject: 'https://forms.gle/nhkPk36gvUbnt24N9',
   showNewUpdateBanner: false,
   showSeasonalBanner: true,
   showGitcoinOption: false,

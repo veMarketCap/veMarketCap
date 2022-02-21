@@ -1,4 +1,4 @@
-import { Project } from '@l2beat/config'
+import { Project } from '@vemarketcap/config'
 
 import { L2Data } from '../../L2Data'
 import { PageMetadata } from '../../PageMetadata'

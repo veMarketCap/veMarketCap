@@ -1,4 +1,4 @@
-import { AssetId, Exchange, mock } from '@l2beat/common'
+import { AssetId, Exchange, mock } from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { PricesController } from '../../../src/api/controllers/PricesController'

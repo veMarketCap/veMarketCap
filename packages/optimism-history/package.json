@@ -1,5 +1,5 @@
 {
-  "name": "@l2beat/optimism-history",
+  "name": "@vemarketcap/optimism-history",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@l2beat/common": "*",
+    "@vemarketcap/common": "*",
     "@types/node": "^16.11.11",
     "@types/node-fetch": "^2.5.12",
     "chalk": "^4.1.2",

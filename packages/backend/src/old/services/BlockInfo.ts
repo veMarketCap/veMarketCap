@@ -1,4 +1,4 @@
-import { Logger, SimpleDate } from '@l2beat/common'
+import { Logger, SimpleDate } from '@vemarketcap/common'
 
 import { AlchemyApi } from './api/AlchemyApi'
 import { EtherscanApi } from './api/EtherscanApi'

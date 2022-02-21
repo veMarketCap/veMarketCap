@@ -1,4 +1,4 @@
-import { getTokenBySymbol } from '@l2beat/config'
+import { getTokenBySymbol } from '@vemarketcap/config'
 import { expect } from 'earljs'
 import { BigNumber, utils } from 'ethers'
 

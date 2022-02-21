@@ -1,4 +1,4 @@
-import { TokenInfo } from '@l2beat/config'
+import { TokenInfo } from '@vemarketcap/config'
 import { constants, utils } from 'ethers'
 import { AbiCoder } from 'ethers/lib/utils'
 

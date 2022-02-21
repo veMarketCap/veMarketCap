@@ -1,4 +1,4 @@
-import { LogLevel, UnixTime } from '@l2beat/common'
+import { LogLevel, UnixTime } from '@vemarketcap/common'
 
 import { Token } from '../model'
 

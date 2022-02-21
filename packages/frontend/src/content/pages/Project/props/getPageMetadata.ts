@@ -1,12 +1,14 @@
-import { Project } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { Project } from '@vemarketcap/config'
 
 import { PageMetadata } from '../../../PageMetadata'
 
 export function getPageMetadata(project: Project): PageMetadata {
   return {
-    title: `${project.name} – L2BEAT`,
-    description: `${project.name} project overview on L2BEAT. In depth layer 2 protocol analysis. Ethereum scaling analytics and research.`,
-    image: `https://l2beat.com/meta-images/${project.slug}.png`,
-    url: `https://l2beat.com/projects/${project.slug}/`,
+    title: `${project.name} – veMarketCap`,
+    description: `${project.name} project overview on veMarketCap.`,
+    image: `https://vemarketcap.com/meta-images/${project.slug}.png`,
+    url: `https://vemarketcap.com/projects/${project.slug}/`,
   }
 }

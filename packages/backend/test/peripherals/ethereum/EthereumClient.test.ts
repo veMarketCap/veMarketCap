@@ -1,4 +1,4 @@
-import { Bytes, EthereumAddress, KeccakHash, mock } from '@l2beat/common'
+import { Bytes, EthereumAddress, KeccakHash, mock } from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { EthereumClient } from '../../../src/peripherals/ethereum/EthereumClient'

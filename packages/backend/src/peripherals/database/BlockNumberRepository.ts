@@ -1,4 +1,4 @@
-import { Logger, UnixTime } from '@l2beat/common'
+import { Logger, UnixTime } from '@vemarketcap/common'
 import { Knex } from 'knex'
 import { BlockNumberRow } from 'knex/types/tables'
 

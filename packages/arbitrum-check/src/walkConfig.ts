@@ -1,4 +1,4 @@
-import { AddressAnalyzer } from '@l2beat/common'
+import { AddressAnalyzer } from '@vemarketcap/common'
 import chalk from 'chalk'
 import { BigNumber, constants, providers, utils } from 'ethers'
 

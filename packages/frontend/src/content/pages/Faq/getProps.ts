@@ -16,11 +16,11 @@ export function getProps(): FaqPageProps {
   return {
     title: 'Frequently Asked Questions',
     metadata: {
-      title: 'L2BEAT – Frequently Asked Questions',
+      title: 'veMarketCap – Frequently Asked Questions',
       description:
-        'Frequently Asked Questions about L2BEAT – an analytics and research website about Ethereum layer 2 scaling.',
-      image: 'https://l2beat.com/meta-images/overview.png',
-      url: 'https://l2beat.com/faq/',
+        'Frequently Asked Questions about veMarketCap – an analytics and research website about Ethereum layer 2 scaling.',
+      image: 'https://vemarketcap.com/meta-images/overview.png',
+      url: 'https://vemarketcap.com/faq/',
     },
     content: getHtml(),
   }

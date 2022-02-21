@@ -1,4 +1,4 @@
-import { Logger, mock, UnixTime } from '@l2beat/common'
+import { Logger, mock, UnixTime } from '@vemarketcap/common'
 import FakeTimers from '@sinonjs/fake-timers'
 import { expect } from 'earljs'
 

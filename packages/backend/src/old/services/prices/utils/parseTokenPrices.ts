@@ -1,4 +1,4 @@
-import { divOrZero } from '@l2beat/common'
+import { divOrZero } from '@vemarketcap/common'
 import { BigNumber, constants } from 'ethers'
 
 import {

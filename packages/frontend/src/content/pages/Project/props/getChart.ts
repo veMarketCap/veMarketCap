@@ -1,4 +1,6 @@
-import { Project } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { Project } from '@vemarketcap/config'
 
 import { ChartProps } from '../../../common'
 import { L2Data } from '../../../L2Data'

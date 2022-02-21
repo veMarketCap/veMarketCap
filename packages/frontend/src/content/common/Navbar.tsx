@@ -17,20 +17,15 @@ export function Navbar() {
     <>
       <nav className="Navbar">
         <a href="/">
-          <Logo className="Navbar-Logo" />
+          {/*<Logo className="Navbar-Logo" />*/}
+          <img src="/Transparent/1/3.png" width={'200px'}/>
         </a>
         <ul className="Navbar-Links left">
           <li className="Navbar-Link">
             <a href="/donate">Donate</a>
           </li>
-          <li className="Navbar-Link less-important">
-            <a href="/jobs">Jobs</a>
-          </li>
         </ul>
         <ul className="Navbar-Links">
-          <li className="Navbar-Link compact">
-            <a href="/faq">FAQ</a>
-          </li>
           <li className="Navbar-Link compact">
             <OutLink href={config.twitterLink} title="Twitter">
               <TwitterIcon />
@@ -47,15 +42,15 @@ export function Navbar() {
             </OutLink>
           </li>
         </ul>
-        <button className="Navbar-Mode" title="Change color scheme">
-          <SunIcon
-            className="Navbar-LightMode"
-            aria-label="Toggle light mode"
-          />
-          <MoonIcon className="Navbar-DarkMode" aria-label="Toggle dark mode" />
-        </button>
+        {/*<button className="Navbar-Mode" title="Change color scheme">*/}
+        {/*  <SunIcon*/}
+        {/*    className="Navbar-LightMode"*/}
+        {/*    aria-label="Toggle light mode"*/}
+        {/*  />*/}
+        {/*  <MoonIcon className="Navbar-DarkMode" aria-label="Toggle dark mode" />*/}
+        {/*</button>*/}
       </nav>
-      <SeasonalBanner />
+      {/*<SeasonalBanner />*/}
     </>
   )
 }

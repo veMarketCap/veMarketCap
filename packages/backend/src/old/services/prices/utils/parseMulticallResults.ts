@@ -1,4 +1,4 @@
-import { divOrZero } from '@l2beat/common'
+import { divOrZero } from '@vemarketcap/common'
 
 import { DAI, TEN_TO_18 } from '../../../constants'
 import {

@@ -1,4 +1,4 @@
-import { EthereumAddress, Exchange, mock } from '@l2beat/common'
+import { EthereumAddress, Exchange, mock } from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { MulticallClient } from '../../../src/peripherals/ethereum/MulticallClient'

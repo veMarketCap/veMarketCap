@@ -1,4 +1,6 @@
-import { ProjectLinks } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { ProjectLinks } from '@vemarketcap/config'
 import React from 'react'
 
 import { ExperimentalStats, ExperimentalStatsProps } from './ExperimentalStats'
@@ -8,7 +10,7 @@ export interface LinkSectionProps {
   icon: string
   name: string
   links: ProjectLinks
-  experimentalStats7d: ExperimentalStatsProps
+  // experimentalStats7d: ExperimentalStatsProps
 }
 
 export function LinkSection(props: LinkSectionProps) {
@@ -30,19 +32,19 @@ export function LinkSection(props: LinkSectionProps) {
             links={props.links.socialMedia}
             social
           />
-          <LinkSectionLinks name="App" links={props.links.apps} />
+          {/*<LinkSectionLinks name="App" links={props.links.apps} />*/}
           <LinkSectionLinks
             name="Documentation"
             links={props.links.documentation}
           />
-          <LinkSectionLinks name="Explorer" links={props.links.explorers} />
+          <LinkSectionLinks name="Governance" links={props.links.governance} />
           <LinkSectionLinks
             name="Source code"
             links={props.links.repositories}
           />
         </tbody>
       </table>
-      <ExperimentalStats {...props.experimentalStats7d} />
+      {/*<ExperimentalStats {...props.experimentalStats7d} />*/}
     </section>
   )
 }

@@ -1,4 +1,4 @@
-import { Logger } from '@l2beat/common'
+import { Logger } from '@vemarketcap/common'
 
 import { AlchemyApi, LogFilter } from './AlchemyApi'
 

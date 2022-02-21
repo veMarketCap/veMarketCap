@@ -4,7 +4,7 @@ import {
   FileCacheBackend,
   HttpClient,
   MainnetEtherscanClient,
-} from '@l2beat/common'
+} from '@vemarketcap/common'
 import dotenv from 'dotenv'
 import { ethers } from 'ethers'
 

@@ -1,9 +1,11 @@
-import { Project } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { Project } from '@vemarketcap/config'
 
 export function getEditLink(project: Project) {
-  return `https://github.com/l2beat/l2beat/edit/master/packages/config/src/projects/${project.slug}.ts`
+  return `https://github.com/veMarketCap/veMarketCap/edit/master/packages/config/src/projects/${project.slug}.ts`
 }
 
 export function getIssueLink(title: string) {
-  return `https://github.com/l2beat/l2beat/issues/new?title=${title}&labels=website`
+  return `https://github.com/veMarketCap/veMarketCap/issues/new?title=${title}&labels=website`
 }

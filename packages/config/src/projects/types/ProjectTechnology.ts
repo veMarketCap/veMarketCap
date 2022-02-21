@@ -31,8 +31,9 @@ export interface ProjectTechnology {
 }
 
 export type ProjectCategory =
-  | 'Optimistic Rollup'
-  | 'Plasma'
-  | 'State Pools'
-  | 'Validium'
-  | 'ZK Rollup'
+  | 'AMM'
+  | 'Stable Coin'
+  | 'Yield'
+  | 'Lending'
+  | 'Interest Rate'
+  | 'Derivatives'

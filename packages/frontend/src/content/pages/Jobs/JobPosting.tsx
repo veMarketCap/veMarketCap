@@ -12,7 +12,7 @@ export function JobPosting() {
         <p className="JobPosting-Location">
           <strong>Poland only</strong> - 100% remote
         </p>
-        <OutLink className="JobPosting-Apply" href="mailto:hello@l2beat.com">
+        <OutLink className="JobPosting-Apply" href="mailto:hello@vemarketcap.com">
           Apply
         </OutLink>
       </header>
@@ -59,10 +59,10 @@ export function JobPosting() {
       </ul>
       <p>
         If you are interested please apply by sending your CV to{' '}
-        <a href="mailto:hello@l2beat.com">hello@l2beat.com</a>.
+        <a href="mailto:hello@vemarketcap.com">hello@vemarketcap.com</a>.
       </p>
       <footer className="JobPosting-Footer">
-        <OutLink className="JobPosting-Apply" href="mailto:hello@l2beat.com">
+        <OutLink className="JobPosting-Apply" href="mailto:hello@vemarketcap.com">
           Apply
         </OutLink>
       </footer>

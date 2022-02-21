@@ -1,4 +1,4 @@
-import { Bytes } from '@l2beat/common'
+import { Bytes } from '@vemarketcap/common'
 import { utils } from 'ethers'
 
 import { MulticallResponse } from '../../../../src/peripherals/ethereum/MulticallClient'

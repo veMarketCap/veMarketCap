@@ -1,4 +1,4 @@
-import { Bytes, EthereumAddress } from '@l2beat/common'
+import { Bytes, EthereumAddress } from '@vemarketcap/common'
 import { utils } from 'ethers'
 import memoizee from 'memoizee'
 

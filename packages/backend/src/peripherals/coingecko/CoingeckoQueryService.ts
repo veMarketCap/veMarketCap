@@ -3,7 +3,7 @@ import {
   CoingeckoId,
   EthereumAddress,
   UnixTime,
-} from '@l2beat/common'
+} from '@vemarketcap/common'
 
 type Granularity = 'daily' | 'hourly'
 type Price = { date: Date; price: number }

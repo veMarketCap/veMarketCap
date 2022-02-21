@@ -7,7 +7,7 @@ export function Analytics() {
   return (
     <script
       defer
-      data-domain="l2beat.com"
+      data-domain="https://vemarketcap.com/"
       src="https://plausible.io/js/plausible.js"
     />
   )

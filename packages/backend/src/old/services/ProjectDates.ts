@@ -1,4 +1,4 @@
-import { dateRange, SimpleDate } from '@l2beat/common'
+import { dateRange, SimpleDate } from '@vemarketcap/common'
 
 import { ProjectInfo } from '../../model'
 import { BlockInfo } from './BlockInfo'

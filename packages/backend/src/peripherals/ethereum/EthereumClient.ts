@@ -1,4 +1,4 @@
-import { KeccakHash } from '@l2beat/common'
+import { KeccakHash } from '@vemarketcap/common'
 
 import { JsonRpcClient } from '../jsonrpc'
 import {

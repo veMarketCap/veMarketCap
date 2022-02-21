@@ -1,4 +1,4 @@
-import { projects } from '@l2beat/config'
+import { projects } from '@vemarketcap/config'
 import chalk from 'chalk'
 import { config as dotenv } from 'dotenv'
 import { constants, providers } from 'ethers'

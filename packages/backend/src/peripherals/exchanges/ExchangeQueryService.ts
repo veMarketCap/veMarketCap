@@ -1,4 +1,4 @@
-import { EthereumAddress, Exchange } from '@l2beat/common'
+import { EthereumAddress, Exchange } from '@vemarketcap/common'
 
 import {
   MulticallClient,

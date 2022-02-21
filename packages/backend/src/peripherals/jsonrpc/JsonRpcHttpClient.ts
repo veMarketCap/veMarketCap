@@ -1,4 +1,4 @@
-import { getErrorMessage, Logger, RequestTracker } from '@l2beat/common'
+import { getErrorMessage, Logger, RequestTracker } from '@vemarketcap/common'
 
 import { HttpClient } from '../HttpClient'
 import { JsonRpcClient } from './JsonRpcClient'

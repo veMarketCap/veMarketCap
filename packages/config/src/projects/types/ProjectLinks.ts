@@ -11,4 +11,6 @@ export interface ProjectLinks {
   repositories: string[]
   /** Links to social media pages. */
   socialMedia: string[]
+  /** Links to Governance pages. */
+  governance: string[]
 }

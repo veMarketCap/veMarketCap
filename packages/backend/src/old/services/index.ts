@@ -1,4 +1,4 @@
-import { Logger, LogLevel } from '@l2beat/common'
+import { Logger, LogLevel } from '@vemarketcap/common'
 
 import { AlchemyApi } from './api/AlchemyApi'
 import { EtherscanApi } from './api/EtherscanApi'

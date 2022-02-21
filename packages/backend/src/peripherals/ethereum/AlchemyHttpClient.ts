@@ -1,4 +1,4 @@
-import { Logger, RateLimiter } from '@l2beat/common'
+import { Logger, RateLimiter } from '@vemarketcap/common'
 
 import { HttpClient } from '../HttpClient'
 import { JsonRpcHttpClient, JsonRpcRequest } from '../jsonrpc'

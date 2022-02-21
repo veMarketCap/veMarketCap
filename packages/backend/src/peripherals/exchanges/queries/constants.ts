@@ -1,4 +1,4 @@
-import { EthereumAddress } from '@l2beat/common'
+import { EthereumAddress } from '@vemarketcap/common'
 
 export const TEN_TO_18 = 10n ** 18n
 

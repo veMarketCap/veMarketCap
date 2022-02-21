@@ -1,4 +1,4 @@
-import { Logger } from '@l2beat/common'
+import { Logger } from '@vemarketcap/common'
 import KnexConstructor, { Knex } from 'knex'
 import path from 'path'
 

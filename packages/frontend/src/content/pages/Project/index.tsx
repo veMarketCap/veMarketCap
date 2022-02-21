@@ -1,4 +1,4 @@
-import { Project } from '@l2beat/config'
+import { Project } from '@vemarketcap/config'
 import React from 'react'
 
 import { L2Data } from '../../L2Data'

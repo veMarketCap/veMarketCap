@@ -1,4 +1,4 @@
-import { AssetId } from '@l2beat/common'
+import { AssetId } from '@vemarketcap/common'
 
 import { ExchangePriceRecord } from '../../peripherals/database/ExchangePriceRepository'
 

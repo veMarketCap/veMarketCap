@@ -1,4 +1,4 @@
-import { SimpleDate } from '@l2beat/common'
+import { SimpleDate } from '@vemarketcap/common'
 
 import { TVLAnalysis } from '../services/balances/model'
 import { Stats } from '../services/StatCollector'

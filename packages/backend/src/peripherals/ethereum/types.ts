@@ -1,4 +1,4 @@
-import { Bytes, EthereumAddress, KeccakHash, UnixTime } from '@l2beat/common'
+import { Bytes, EthereumAddress, KeccakHash, UnixTime } from '@vemarketcap/common'
 
 import { as } from '../../tools/cast'
 import {

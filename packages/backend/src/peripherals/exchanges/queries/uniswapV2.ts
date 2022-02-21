@@ -1,4 +1,4 @@
-import { Bytes, EthereumAddress, Exchange, KeccakHash } from '@l2beat/common'
+import { Bytes, EthereumAddress, Exchange, KeccakHash } from '@vemarketcap/common'
 import { utils } from 'ethers'
 import memoizee from 'memoizee'
 

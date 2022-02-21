@@ -1,10 +1,6 @@
-import {
-  Project,
-  ProjectContract,
-  ProjectReference,
-  ProjectTechnology,
-  ProjectTechnologyChoice,
-} from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import {Project, ProjectContract, ProjectReference, ProjectTechnology, ProjectTechnologyChoice,} from '@vemarketcap/config'
 
 import {
   ContractsSectionProps,
@@ -47,7 +43,7 @@ export function getTechnologyOverview(project: Project): TechnologyOverview {
     id: string,
     item: ProjectTechnologyChoice
   ): TechnologyChoice {
-    const risks = item.risks.map((risk) => ({
+    const risks = item.risks.map((risk:any) => ({
       referenceIds: (risk.references ?? []).map(addReference),
       text: `${risk.category} ${risk.text}`,
       isCritical: !!risk.isCritical,
@@ -92,7 +88,7 @@ export function getTechnologyOverview(project: Project): TechnologyOverview {
       id: 'withdrawals',
       title: 'Withdrawals',
       items: [
-        ...tech.exitMechanisms.map((x, i) =>
+        ...tech.exitMechanisms.map((x:any, i:number) =>
           makeTechnologyChoice(`exit-mechanisms-${i + 1}`, x)
         ),
         tech.massExit && makeTechnologyChoice('mass-exit', tech.massExit),
@@ -155,7 +151,7 @@ export function getTechnologyOverview(project: Project): TechnologyOverview {
     }
 
     const tokens = project.bridges.find(
-      (x) => x.address === item.address
+      (x:any) => x.address === item.address
     )?.tokens
     let description = item.description
     if (tokens) {
@@ -179,7 +175,7 @@ export function getTechnologyOverview(project: Project): TechnologyOverview {
   function makeContractSection(tech: ProjectTechnology) {
     const contracts = tech.contracts.addresses.map(makeTechnologyContract)
 
-    const risks = tech.contracts.risks.map((risk) => ({
+    const risks = tech.contracts.risks.map((risk:any) => ({
       referenceIds: (risk.references ?? []).map(addReference),
       text: `${risk.category} ${risk.text}`,
       isCritical: !!risk.isCritical,
@@ -214,7 +210,7 @@ export function getTechnologyOverview(project: Project): TechnologyOverview {
 }
 
 function getTwitterLink(project: Project) {
-  const twitterSocialMedia = project.details.links.socialMedia.find((x) =>
+  const twitterSocialMedia = project.details.links.socialMedia.find((x:any) =>
     x.includes('twitter')
   )
   if (!twitterSocialMedia) {
@@ -224,8 +220,8 @@ function getTwitterLink(project: Project) {
     'https://twitter.com/'.length
   )
 
-  const message = `Hey @${twitterAccount}. Your project overview on @l2beatcom would benefit from your help.`
-  const url = `https://l2beat.com/projects/${project.slug}`
+  const message = `Hey @${twitterAccount}. Your project overview on @vemarketcap.com would benefit from your help.`
+  const url = `https://vemarketcap.com/projects/${project.slug}`
 
   const options = [
     ['text', encodeURIComponent(message)],

@@ -1,4 +1,4 @@
-import { json } from '@l2beat/common'
+import { json } from '@vemarketcap/common'
 
 interface StatusReporter {
   getStatus(): json

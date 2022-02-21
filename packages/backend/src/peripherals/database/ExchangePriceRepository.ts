@@ -1,4 +1,4 @@
-import { AssetId, Exchange, Logger } from '@l2beat/common'
+import { AssetId, Exchange, Logger } from '@vemarketcap/common'
 import { Knex } from 'knex'
 import { ExchangePriceRow } from 'knex/types/tables'
 

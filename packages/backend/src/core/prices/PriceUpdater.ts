@@ -1,4 +1,4 @@
-import { createEventEmitter, JobQueue, Logger } from '@l2beat/common'
+import { createEventEmitter, JobQueue, Logger } from '@vemarketcap/common'
 
 import { Token } from '../../model'
 import { BlockNumberRecord } from '../../peripherals/database/BlockNumberRepository'

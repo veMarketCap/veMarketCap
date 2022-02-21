@@ -1,4 +1,4 @@
-import { EthereumAddress } from '@l2beat/common'
+import { EthereumAddress } from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { MULTICALL_V1_ADDRESS } from '../../../../src/peripherals/ethereum/MulticallClient'

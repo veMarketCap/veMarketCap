@@ -1,17 +1,19 @@
-import { Project } from '@l2beat/config'
+import { Project } from '@vemarketcap/config'
 
 export function getTechnology(project: Project) {
   const name = project.details.technology.category.name
   switch (name) {
-    case 'Optimistic Rollup':
-      return { abbreviation: 'ORU', name }
-    case 'ZK Rollup':
-      return { abbreviation: 'ZKR', name }
-    case 'Plasma':
-      return { abbreviation: 'PLA', name }
-    case 'Validium':
-      return { abbreviation: 'VAL', name }
-    case 'State Pools':
-      return { abbreviation: 'STP', name }
+    case 'AMM':
+      return { abbreviation: 'AMM', name }
+    case 'Derivatives':
+      return { abbreviation: 'DRV', name }
+    case 'Interest Rate':
+      return { abbreviation: 'IR', name }
+    case 'Lending':
+      return { abbreviation: 'LNG', name }
+    case 'Stable Coin':
+      return { abbreviation: 'STC', name }
+    case 'Yield':
+      return { abbreviation: 'YLD', name }
   }
 }

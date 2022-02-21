@@ -1,6 +1,6 @@
-# @l2beat/frontend
+# @vemarketcap/frontend
 
-The statically generated frontend that is the face of L2BEAT.
+The statically generated frontend that is the face of veMarketCap.
 
 ## Setup
 
@@ -9,12 +9,8 @@ commands in the repository root:
 
 ```
 yarn
-yarn build:mock
+yarn build
 ```
-
-To learn why we use `build:mock` instead of `build` please refer to the backend&apos;s
-[README](https://github.com/l2beat/l2beat/blob/master/packages/backend/README.md).
-
 ## Scripts
 
 - `yarn start` - run the development server

@@ -1,4 +1,4 @@
-import { AddressAnalyzer, EthereumAddress } from '@l2beat/common'
+import { AddressAnalyzer, EthereumAddress } from '@vemarketcap/common'
 import { providers, utils } from 'ethers'
 
 const IMPLEMENTATION_SLOT = slot('eip1967.proxy.implementation')

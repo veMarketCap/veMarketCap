@@ -1,6 +1,6 @@
-# @l2beat/config
+# @vemarketcap/config
 
-This is the shared config for the L2BEAT website. It contains project definitions and a list of tokens.
+This is the shared config for the veMarketCap website. It contains project definitions and a list of tokens.
 
 ## Scripts
 

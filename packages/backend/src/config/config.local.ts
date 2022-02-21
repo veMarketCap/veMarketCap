@@ -1,4 +1,4 @@
-import { AssetId, EthereumAddress, LogLevel, UnixTime } from '@l2beat/common'
+import { AssetId, EthereumAddress, LogLevel, UnixTime } from '@vemarketcap/common'
 import { config as dotenv } from 'dotenv'
 
 import { Config } from './Config'

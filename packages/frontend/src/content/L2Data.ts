@@ -7,6 +7,8 @@ export interface L2Data {
 export interface ProjectData {
   aggregate: ChartData
   byToken: Record<string, ChartData>
+  chains: Array<string>
+  mcapTvl: string
 }
 
 export interface ChartData {

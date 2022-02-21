@@ -1,4 +1,4 @@
-import { Project } from '@l2beat/config'
+import { Project } from '@vemarketcap/config'
 
 import { RiskViewEntry, RiskViewProps } from '../view/RiskView/RiskView'
 

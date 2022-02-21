@@ -1,5 +1,5 @@
 import Router from '@koa/router'
-import { Logger } from '@l2beat/common'
+import { Logger } from '@vemarketcap/common'
 import Koa from 'koa'
 
 import { createApiLogger } from './ApiLogger'

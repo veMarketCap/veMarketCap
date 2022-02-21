@@ -1,14 +1,16 @@
 export function configureDarkMode() {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-  const saved = localStorage.getItem('l2beat-theme')
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const override: boolean | undefined = (window as any).__DARK_MODE__
+  // const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  // const saved = localStorage.getItem('vemarketcap-theme')
+  // // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // const override: boolean | undefined = (window as any).__DARK_MODE__
 
-  let darkModeEnabled = saved ? saved === 'dark' : prefersDark
+  // let darkModeEnabled = saved ? saved === 'dark' : prefersDark
+  let darkModeEnabled = true
+  const override = true
   if (typeof override === 'boolean') {
     darkModeEnabled = override
     updateTheme()
-  } else if (saved) {
+  } else {
     updateTheme()
   }
 
@@ -20,7 +22,7 @@ export function configureDarkMode() {
   function updateTheme() {
     const theme = darkModeEnabled ? 'dark' : 'light'
     document.documentElement.dataset.theme = theme
-    localStorage.setItem('l2beat-theme', theme)
+    localStorage.setItem('vemarketcap-theme', theme)
   }
 
   document

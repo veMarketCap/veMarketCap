@@ -1,4 +1,4 @@
-import { AddressAnalyzer } from '@l2beat/common'
+import { AddressAnalyzer } from '@vemarketcap/common'
 import { Event } from 'ethers'
 
 import { BlockTimestampService } from './BlockTimestampService'

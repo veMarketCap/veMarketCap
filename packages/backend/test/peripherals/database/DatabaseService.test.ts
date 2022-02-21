@@ -1,4 +1,4 @@
-import { Logger } from '@l2beat/common'
+import { Logger } from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { DatabaseService } from '../../../src/peripherals/database/DatabaseService'

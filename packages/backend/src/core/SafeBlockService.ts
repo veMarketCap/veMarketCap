@@ -1,4 +1,4 @@
-import { createEventEmitter, Logger, UnixTime } from '@l2beat/common'
+import { createEventEmitter, Logger, UnixTime } from '@vemarketcap/common'
 
 import { EthereumClient } from '../peripherals/ethereum/EthereumClient'
 

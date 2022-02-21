@@ -1,4 +1,4 @@
-import { LogLevel, UnixTime } from '@l2beat/common'
+import { LogLevel, UnixTime } from '@vemarketcap/common'
 import { config as dotenv } from 'dotenv'
 
 import { Config } from './Config'

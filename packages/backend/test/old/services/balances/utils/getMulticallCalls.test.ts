@@ -1,4 +1,4 @@
-import { getTokenBySymbol } from '@l2beat/config'
+import { getTokenBySymbol } from '@vemarketcap/config'
 import { expect } from 'earljs'
 
 import { getMulticallCalls } from '../../../../../src/old/services/balances/utils/getMulticallCalls'

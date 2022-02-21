@@ -1,4 +1,4 @@
-import { AddressAnalyzer, EthereumAddress } from '@l2beat/common'
+import { AddressAnalyzer, EthereumAddress } from '@vemarketcap/common'
 import { Contract, providers, utils } from 'ethers'
 
 import { analyzeEip1967Proxy } from './analyzeEip1967Proxy'

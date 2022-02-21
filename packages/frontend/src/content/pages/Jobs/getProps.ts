@@ -9,10 +9,10 @@ export function getProps(): JobsPageProps {
   return {
     title: 'Open positions',
     metadata: {
-      title: 'Jobs – L2BEAT',
+      title: 'Jobs – veMarket Cap',
       description: '',
-      image: 'https://l2beat.com/meta-images/jobs.png',
-      url: 'https://l2beat.com/jobs/',
+      image: 'https://vemarketcap.com//meta-images/jobs.png',
+      url: 'https://vemarketcap.com/jobs/',
     },
   }
 }

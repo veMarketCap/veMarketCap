@@ -1,4 +1,4 @@
-import { Project, ProjectRiskView } from '@l2beat/config'
+import { Project, ProjectRiskView } from '@vemarketcap/config'
 import React from 'react'
 
 import { OptimismIcon, StarkWareIcon } from '../../../../common/icons'
@@ -47,15 +47,15 @@ export function RiskView({ items }: RiskViewProps) {
   return (
     <div className="RiskView">
       <TableView items={items} columns={columns} />
-      <div className="RiskView-Symbols">
-        <p>
-          <StarkWareIcon /> &ndash; This project is built using StarkEx.
-        </p>
-        <p>
-          <OptimismIcon /> &ndash; This project is based on Optimism&apos;s code
-          base.
-        </p>
-      </div>
+      {/*<div className="RiskView-Symbols">*/}
+      {/*  <p>*/}
+      {/*    <StarkWareIcon /> &ndash; This project is built using StarkEx.*/}
+      {/*  </p>*/}
+      {/*  <p>*/}
+      {/*    <OptimismIcon /> &ndash; This project is based on Optimism&apos;s code*/}
+      {/*    base.*/}
+      {/*  </p>*/}
+      {/*</div>*/}
     </div>
   )
 }

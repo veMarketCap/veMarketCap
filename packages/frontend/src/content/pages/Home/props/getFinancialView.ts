@@ -1,4 +1,7 @@
-import { getTokenBySymbol, Project } from '@l2beat/config'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import l2Data from "@vemarketcap/backend";
+import { getTokenBySymbol, Project } from '@vemarketcap/config'
 
 import { ChartData, L2Data, ProjectData } from '../../../L2Data'
 import {
@@ -76,6 +79,9 @@ function getFinancialViewEntry(
     marketShare: formatPercent(tvl / aggregateTvl),
     purpose: project.details.purpose,
     technology: getTechnology(project),
+    status: project.details.status,
+    chains: projectData.chains,
+    mcapTVL: projectData.mcapTvl
   }
 }
 
@@ -98,19 +104,19 @@ function getTVLBreakdown(
   let ether = 0
   let stable = 0
   let other = 0
-  for (const [token, data] of Object.entries(byToken)) {
-    const tvl = getFromEnd(data.data, 0)[2]
-    const category = getTokenBySymbol(token).category
-    if (associatedTokens.includes(token)) {
-      associated += tvl
-    } else if (category === 'ether') {
-      ether += tvl
-    } else if (category === 'stablecoin') {
-      stable += tvl
-    } else if (category === 'other') {
-      other += tvl
-    }
-  }
+  // for (const [token, data] of Object.entries(byToken)) {
+  //   const tvl = getFromEnd(data.data, 0)[2]
+  //   const category = getTokenBySymbol(token).category
+  //   if (associatedTokens.includes(token)) {
+  //     associated += tvl
+  //   } else if (category === 'ether') {
+  //     ether += tvl
+  //   } else if (category === 'stablecoin') {
+  //     stable += tvl
+  //   } else if (category === 'other') {
+  //     other += tvl
+  //   }
+  // }
 
   const toPercent = (x: number) => ((x * 100) / total).toFixed(2) + '%'
   const toLabel = (text: string, x: number) =>

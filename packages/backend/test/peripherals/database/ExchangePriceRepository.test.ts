@@ -1,4 +1,4 @@
-import { AssetId, Exchange, Logger } from '@l2beat/common'
+import { AssetId, Exchange, Logger } from '@vemarketcap/common'
 import { expect } from 'earljs'
 
 import { ExchangePriceRepository } from '../../../src/peripherals/database/ExchangePriceRepository'
