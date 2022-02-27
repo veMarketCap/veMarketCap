@@ -25,7 +25,7 @@ export async function getProps(): Promise<DonatePageProps> {
         metadata: {
             title: 'Donate – veMarket Cap',
             description: '',
-            image: 'https://vemarketcap.com//meta-images/overview.png',
+            image: 'https://vemarketcap.com/meta-images/overview.png',
             url: 'https://vemarketcap.com/donate/',
         },
         details: {
