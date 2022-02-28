@@ -1,24 +1,23 @@
 import React from 'react'
 
+import {BenefitSection,BenefitSectionProps} from './BenefitSection'
 import {ContractsSection, ContractsSectionProps} from './ContractsSection'
 import {
     DescriptionSection,
     DescriptionSectionProps,
 } from './DescriptionSection'
+import {GaugeWeightSection,GaugeWeightSectionProps} from './GaugeWeightSection'
 import {LinkSection, LinkSectionProps} from './links/LinkSection'
 import {NewsSection, NewsSectionProps} from './NewsSection'
 import {ReferencesSection, ReferencesSectionProps} from './ReferencesSection'
+import {RewardSection,RewardSectionProps} from './RewardSection'
 import {RiskSection, RiskSectionProps} from './RiskSection'
 import {TechnologyIncomplete, TechnologyIncompleteProps} from './TechnologyIncomplete'
 import {TechnologySection, TechnologySectionProps} from './TechnologySection'
-import {BenefitSectionProps, BenefitSection} from './BenefitSection'
-import {VotingSectionProps, VotingSection} from './VotingSection'
-import {GaugeWeightSectionProps, GaugeWeightSection} from './GaugeWeightSection'
-import {RewardSectionProps, RewardSection} from './RewardSection'
+import {VotingSection,VotingSectionProps} from './VotingSection'
 
 export interface ProjectDetailsProps {
     linkSection: LinkSectionProps
-    newsSection: NewsSectionProps
     descriptionSection: DescriptionSectionProps
     riskSection: RiskSectionProps
     incomplete?: TechnologyIncompleteProps

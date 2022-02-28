@@ -8,7 +8,6 @@ import { getBenefitSection } from './getBenefitSection'
 import { getDescriptionSection } from './getDescriptionSection'
 import {getGaugeWeightSection} from "./getGaugeWeightSection";
 import { getLinkSection } from './getLinkSection'
-import { getNewsSection } from './getNewsSection'
 import {getRewardSection} from "./getRewardSection";
 import { getRiskSection } from './getRiskSection'
 import { getTechnologyOverview } from './getTechnologyOverview'
@@ -19,7 +18,6 @@ export function getProjectDetails(
   l2Data: L2Data
 ): ProjectDetailsProps {
   return {
-    newsSection: getNewsSection(project),
     linkSection: getLinkSection(project, l2Data),
     descriptionSection: getDescriptionSection(project),
     riskSection: getRiskSection(project),
