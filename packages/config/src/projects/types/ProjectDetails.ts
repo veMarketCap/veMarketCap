@@ -1,6 +1,4 @@
-import { News } from './News'
 import { ProjectLinks } from './ProjectLinks'
-import { ProjectRiskView } from './ProjectRiskView'
 import { ProjectTechnology } from './ProjectTechnology'
 
 export interface ProjectDetails {
@@ -26,8 +24,4 @@ export interface ProjectDetails {
   provider?: 'StarkEx' | 'Optimism'
   /** Deep dive into project technology */
   technology: ProjectTechnology
-  /** Risk view values for this project */
-  riskView: ProjectRiskView
-  /** Links to recent developments */
-  news: News[]
 }

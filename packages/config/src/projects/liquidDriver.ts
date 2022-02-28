@@ -4,7 +4,6 @@ import {
     EXITS,
     FORCE_TRANSACTIONS,
     OPERATOR,
-    RISK_VIEW,
     STATE_CORRECTNESS,
 } from './common'
 import { Project } from './types'
@@ -33,18 +32,6 @@ export const LiquidDriver: Project = {
                 'https://twitter.com/LiquidDriver',
                 'https://discord.com/invite/6BvXc9Bbfu',
             ],
-        },
-        riskView: {
-            stateValidation: {
-                value: 'Fraud proofs (!)',
-                description:
-                    'Fraud proofs allow actors watching the chain to prove that the state is incorrect. Because the data is not present on chain the security of fraud proofs is severely weakened.',
-                sentiment: 'warning',
-            },
-            dataAvailability: RISK_VIEW.DATA_EXTERNAL,
-            upgradeability: RISK_VIEW.UPGRADABLE_YES,
-            sequencerFailure: RISK_VIEW.SEQUENCER_EXIT_L1,
-            validatorFailure: RISK_VIEW.VALIDATOR_ESCAPE_MP,
         },
         technology: {
             category: {
@@ -176,22 +163,5 @@ export const LiquidDriver: Project = {
                 risks: [CONTRACTS.UPGRADE_NO_DELAY_RISK],
             },
         },
-        news: [
-            {
-                date: '2021-08-02',
-                name: 'Funding Rates: July 16–31, 2021',
-                link: 'https://blog.leverj.io/funding-rates-july-16-31-2021-610f3506b4d8',
-            },
-            {
-                date: '2020-07-26',
-                name: 'Funding Rates: July 1–15, 2021',
-                link: 'https://blog.leverj.io/funding-rates-july-1-15-2021-5595b7e5ffcd',
-            },
-            {
-                date: '2021-07-22',
-                name: 'Where to see the referral reward I earned?',
-                link: 'https://blog.leverj.io/where-to-see-the-referral-reward-i-earned-246758dc7d0a',
-            },
-        ],
     },
 }
