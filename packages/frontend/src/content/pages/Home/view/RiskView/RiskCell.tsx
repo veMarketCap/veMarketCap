@@ -1,18 +1,13 @@
-import { ProjectRiskViewEntry } from '@vemarketcap/config'
 import cx from 'classnames'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 interface Props {
-  item: ProjectRiskViewEntry
+  children: ReactNode
+  className?: string
 }
 
-export function RiskCell({ item }: Props) {
+export function RiskCell({ children, className }: Props) {
   return (
-    <span
-      className={cx('RiskCell', item.sentiment, 'Tooltip')}
-      title={item.description}
-    >
-      {item.value}
-    </span>
+      <span className={cx('RiskCell', className)}>{children}</span>
   )
 }

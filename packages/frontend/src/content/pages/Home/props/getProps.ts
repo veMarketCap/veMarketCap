@@ -21,7 +21,7 @@ export function getProps(projects: Project[], l2Data: L2Data): HomePageProps {
     sevenDayChange,
     apiEndpoint: '/api/tvl.json',
     financialView: getFinancialView(ordering, l2Data, tvl),
-    riskView: getRiskView(ordering),
+    riskView: getRiskView(ordering, l2Data),
     metadata: getPageMetadata(),
   }
 }

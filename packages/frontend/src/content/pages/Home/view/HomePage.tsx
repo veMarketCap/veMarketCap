@@ -13,7 +13,7 @@ export interface HomePageProps {
   sevenDayChange: string
   apiEndpoint: string
   financialView: FinancialViewProps
-  // riskView: RiskViewProps
+  riskView: RiskViewProps
   metadata: PageMetadata
 }
 
@@ -30,7 +30,7 @@ export function HomePage(props: HomePageProps) {
         <Chart endpoint={props.apiEndpoint} />
         <Projects
           financialView={props.financialView}
-          // riskView={props.riskView}
+          riskView={props.riskView}
         />
         <OtherSites />
         <About />

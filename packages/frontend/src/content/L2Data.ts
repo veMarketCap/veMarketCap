@@ -9,6 +9,11 @@ export interface ProjectData {
   byToken: Record<string, ChartData>
   chains: Array<string>
   mcapTvl: string
+  lockedValueByTVL: string
+  velockedUsd: string
+  holdersCount: string
+  LockedVetokenByTotalCirculationToken: string
+  vecontract: string
 }
 
 export interface ChartData {

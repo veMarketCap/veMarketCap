@@ -58,11 +58,7 @@ export function FinancialView({items}: FinancialViewProps) {
             name: 'Type',
             shortName: 'Tech',
             alignRight: true,
-            getValue: (project) => {
-                return (<FinancialCell>
-                    {project.technology.name}
-                </FinancialCell>)
-            },
+            getValue: (project) => project.technology.name,
         },
         {
             name: `Status`,

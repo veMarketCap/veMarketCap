@@ -1,7 +1,7 @@
-import { Project, ProjectRiskView } from '@vemarketcap/config'
 import React from 'react'
 
 import { OptimismIcon, StarkWareIcon } from '../../../../common/icons'
+import {FinancialViewEntry} from "../FinancialView/FinancialView";
 import { ProjectLink } from '../ProjectLink'
 import { Column, TableView } from '../TableView'
 import { RiskCell } from './RiskCell'
@@ -10,10 +10,14 @@ export interface RiskViewProps {
   items: RiskViewEntry[]
 }
 
-export interface RiskViewEntry extends ProjectRiskView {
+export interface RiskViewEntry {
   name: string
   slug: string
-  provider?: Project['details']['provider']
+  lockedValueByTVL: string
+  velockedUsd: string
+  holdersCount: string
+  lockedVetokenBytotalCirculationToken: string
+  vecontract: string
 }
 
 export function RiskView({ items }: RiskViewProps) {
@@ -23,24 +27,29 @@ export function RiskView({ items }: RiskViewProps) {
       getValue: (project) => <ProjectLink project={project} />,
     },
     {
-      name: 'State validation',
-      getValue: (project) => <RiskCell item={project.stateValidation} />,
+      name: 'Locked Value/TVL',
+      alignRight: true,
+      getValue: (project) => project.lockedValueByTVL,
     },
     {
-      name: 'Data availability',
-      getValue: (project) => <RiskCell item={project.dataAvailability} />,
+      name: 'veLockedUsd',
+      alignRight: true,
+      getValue: (project) => parseFloat(project.velockedUsd).toFixed(2),
     },
     {
-      name: 'Upgradeability',
-      getValue: (project) => <RiskCell item={project.upgradeability} />,
+      name: 'Holders Count',
+      alignRight: true,
+      getValue: (project) => project.holdersCount,
     },
     {
-      name: 'Sequencer failure',
-      getValue: (project) => <RiskCell item={project.sequencerFailure} />,
+      name: 'Vetoken/Total Amount',
+      alignRight: true,
+      getValue: (project) => project.lockedVetokenBytotalCirculationToken,
     },
     {
-      name: 'Validator failure',
-      getValue: (project) => <RiskCell item={project.validatorFailure} />,
+      name: 'veContract',
+      alignRight: true,
+      getValue: (project) => project.vecontract,
     },
   ]
 
