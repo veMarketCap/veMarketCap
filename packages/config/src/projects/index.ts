@@ -1,5 +1,7 @@
 import {_88mph} from './88mph'
+import {angle} from './angle'
 import {balancer} from './balancer'
+import {creditum} from "./creditum";
 import {curve} from './curve'
 import {dydx} from './dydx'
 import {frax} from './frax'
@@ -19,7 +21,9 @@ export * from './types'
 
 export const projects: Project[] = [
     _88mph,
+    angle,
     balancer,
+    creditum,
     curve,
     dydx,
     frax,

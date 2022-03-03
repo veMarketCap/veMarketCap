@@ -4,7 +4,7 @@ export function calculateAggregate(projectData: any) {
     const [smallestDate, greatestDate] = findDateRange(projectData.byProject)
 
     fillAllDates(projectData.byProject, [smallestDate, greatestDate])
-    const dataLength = projectData.byProject[MAIN_TOKEN].aggregate.data.length
+    const dataLength = projectData.byProject[MAIN_TOKEN]?.aggregate?.data?.length
 
     console.log('Here I am....')
     const aggregate = {

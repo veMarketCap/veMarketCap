@@ -2,6 +2,7 @@ export interface L2Data {
   aggregate: ChartData
   byProject: Record<string, ProjectData>
   experimental: Record<string, ExperimentalData>
+  curveMarket: any
 }
 
 export interface ProjectData {

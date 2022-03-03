@@ -51,6 +51,11 @@ const fetchVetokenData = async () => {
     vecontract = vecontractArr
 }
 
+const fetchCurveMarketData = async () => {
+    const res = await axios.get('https://curvemarketcap.com/leaderboard.json');
+    projectData.curveMarket = res.data.data
+}
+
 const data = (coinData: any, index: number) => {
     mappedData = coinData.tvl.map((e: any) => {
         return [
@@ -78,6 +83,7 @@ const data = (coinData: any, index: number) => {
 (async () => {
     await fetchVetokenData()
     await fetchDefillamaData()
+    await fetchCurveMarketData()
 
     const aggregate = calculateAggregate(projectData)
     const data = Object.assign({}, projectData, {aggregate})

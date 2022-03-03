@@ -25,7 +25,7 @@ export function ProjectPage(props: ProjectPageProps) {
       <Navbar />
       <Header {...props.header} />
       <Chart {...props.chart} />
-      <ProjectDetails {...props.projectDetails} />
+      {/*<ProjectDetails {...props.projectDetails} />*/}
       <Footer />
     </Page>
   )
