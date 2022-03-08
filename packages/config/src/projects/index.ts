@@ -6,6 +6,7 @@ import {curve} from './curve'
 import {dydx} from './dydx'
 import {frax} from './frax'
 import {hundred} from './hundred'
+import {idleFinance} from "./idleFinance"
 import {LiquidDriver} from './liquidDriver'
 import {pickle} from './pickle'
 import {platypus} from './platypus'
@@ -28,6 +29,7 @@ export const projects: Project[] = [
     dydx,
     frax,
     hundred,
+    idleFinance,
     LiquidDriver,
     pickle,
     platypus,
