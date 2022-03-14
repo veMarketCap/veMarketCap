@@ -27,7 +27,7 @@ export function getRiskViewEntry(
     lockedValueByTVL: projectData.lockedValueByTVL,
     velockedUsd: projectData.velockedUsd,
     holdersCount: projectData.holdersCount,
-    lockedVetokenBytotalCirculationToken: projectData.LockedVetokenByTotalCirculationToken,
+    lockedUpPercentage: projectData.lockedUpPercentage,
     vecontract: projectData.vecontract
   }
 }

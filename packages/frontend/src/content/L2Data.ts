@@ -13,7 +13,7 @@ export interface ProjectData {
   lockedValueByTVL: string
   velockedUsd: string
   holdersCount: string
-  LockedVetokenByTotalCirculationToken: string
+  lockedUpPercentage: string
   vecontract: string
 }
 

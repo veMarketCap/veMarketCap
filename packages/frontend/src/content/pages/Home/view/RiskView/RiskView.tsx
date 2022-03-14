@@ -16,7 +16,7 @@ export interface RiskViewEntry {
     lockedValueByTVL: string
     velockedUsd: string
     holdersCount: string
-    lockedVetokenBytotalCirculationToken: string
+    lockedUpPercentage: string
     vecontract: string
 }
 
@@ -62,30 +62,50 @@ export function RiskView({items}: RiskViewProps) {
             name: 'Name',
             getValue: (project) => <ProjectLink project={project}/>,
         },
-        {
-            name: 'Locked Value/TVL',
-            alignRight: true,
-            getValue: (project) => project.lockedValueByTVL,
-        },
+        // {
+        //     name: 'Locked Value/TVL',
+        //     alignRight: true,
+        //     getValue: (project) => project.lockedValueByTVL,
+        // },
         {
             name: 'veLockedUsd',
-            alignRight: true,
             getValue: (project) => convertNumber(project.velockedUsd, 2),
         },
         {
             name: 'Holders Count',
-            alignRight: true,
             getValue: (project) => convertNumber(project.holdersCount, 10),
         },
         {
-            name: 'Vetoken/Total Amount',
-            alignRight: true,
-            getValue: (project) => project.lockedVetokenBytotalCirculationToken,
+            name: 'locked up%',
+            getValue: (project) => parseFloat(project.lockedUpPercentage).toFixed(2),
         },
         {
             name: 'veContract',
-            alignRight: true,
-            getValue: (project) => project.vecontract,
+            getValue: (project) => {
+                let url
+                let seperator = project.vecontract.toString().split(':')
+                if (project.vecontract.toString().includes('solana')) {
+                    url = `https://solscan.io/account/${seperator[1]}`;
+                } else if (project.vecontract.toString().includes('avax')) {
+                    // const seperator = project.vecontract.split(':')
+                    url = `https://snowtrace.io/address/${seperator[1]}`;
+                } else if (project.vecontract.toString().includes('fantom')) {
+                    // const seperator = project.vecontract.split(':')
+                    url = `https://ftmscan.com/address/${seperator[1]}`;
+                } else if (project.vecontract.toString().includes('arb')) {
+                    // const seperator = project.vecontract.split(':')
+                    url = `https://arbiscan.io/address/${seperator[1]}`;
+                } else {
+                    url = `https://etherscan.io/address/${project.vecontract}`
+                }
+                if (project.vecontract.toString().includes(':')) {
+                    return <a href={url} target={"_blank"}>{(project.vecontract.toString().split(':')[1]).slice(0, 5)}...{(project.vecontract.toString().split(':')[1]).slice(-5, -1)}</a>
+                } else if (project.vecontract == '0') {
+                    return <a href={'#'} target={"_blank"} style={{textDecoration: 'none'}}>{project.vecontract}</a>
+                } else {
+                    return <a href={url} target={"_blank"}>{project.vecontract.toString().slice(0, 5)}...{project.vecontract.toString().slice(-5, -1)}</a>
+                }
+            },
         },
     ]
 
