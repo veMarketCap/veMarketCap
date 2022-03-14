@@ -83,7 +83,7 @@ export function RiskView({items}: RiskViewProps) {
             name: 'veContract',
             getValue: (project) => {
                 let url
-                let seperator = project.vecontract.toString().split(':')
+                const seperator = project.vecontract.toString().split(':')
                 if (project.vecontract.toString().includes('solana')) {
                     url = `https://solscan.io/account/${seperator[1]}`;
                 } else if (project.vecontract.toString().includes('avax')) {
