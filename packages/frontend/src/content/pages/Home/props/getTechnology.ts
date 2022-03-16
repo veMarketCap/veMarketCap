@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { Project } from '@vemarketcap/config'
 
 export function getTechnology(project: Project) {
@@ -15,5 +17,7 @@ export function getTechnology(project: Project) {
       return { abbreviation: 'STC', name }
     case 'Yield':
       return { abbreviation: 'YLD', name }
+    case 'Options':
+      return { abbreviation: 'OPT', name }
   }
 }

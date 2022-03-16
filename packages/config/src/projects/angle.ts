@@ -21,7 +21,7 @@ export const angle: Project = {
         gaugeWeights: "The veANGLE gives the holders voting power to receive additional ANGLE emissions (up to 2.5x) boosted emission. But it's dependent on the veANGLE amount.",
         rewards: "On top of the ANGLE emission, stakers will also earn a bit of interest accrued by the protocol as well. The other part of the interest that's being earned by the protocol will be used to buy back ANGLE from the open market and redistribute it back to veANGLE holders.",
         purpose: 'Exchange',
-        status: 'In progress',
+        status: 'On',
         links: {
             websites: ['https://www.angle.money'],
             apps: [''],
@@ -36,7 +36,7 @@ export const angle: Project = {
         },
         technology: {
             category: {
-                name: 'Interest Rate',
+                name: 'Yield',
                 details: 'angle',
             },
             stateCorrectness: {

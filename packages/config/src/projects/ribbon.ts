@@ -26,7 +26,7 @@ export const ribbon: Project = {
         ],
         rewards: 'The holders of veRBN will get up to a 2.5x boost of the RBN emission for depositing their funds into the vault. There will also be protocol sharing fee, but the exact percentage that will go to veRBN holders is yet to be determined at the time of writing.',
         purpose: 'Exchange',
-        status: 'On',
+        status: 'In progress',
         links: {
             websites: ['https://www.ribbon.finance'],
             apps: [''],
@@ -41,7 +41,7 @@ export const ribbon: Project = {
         },
         technology: {
             category: {
-                name: 'Yield',
+                name: 'Options',
                 details: 'Ribbon Finance',
             },
             stateCorrectness: {
