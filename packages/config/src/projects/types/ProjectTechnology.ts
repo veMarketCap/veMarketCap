@@ -37,3 +37,4 @@ export type ProjectCategory =
   | 'Lending'
   | 'Interest Rate'
   | 'Derivatives'
+  | 'Options'

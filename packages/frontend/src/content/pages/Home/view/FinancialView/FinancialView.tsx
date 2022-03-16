@@ -68,7 +68,12 @@ export function FinancialView({items}: FinancialViewProps) {
         {
             name: 'Mcap / TVL',
             alignRight: true,
-            getValue: (project) => parseFloat(project.mcapTVL).toFixed(4)
+            getValue: (project) => {
+                if (parseFloat(project.mcapTVL) !== 0) {
+                    return parseFloat(project.mcapTVL).toFixed(4)
+                }
+                return '?'
+            }
         }
     ]
 

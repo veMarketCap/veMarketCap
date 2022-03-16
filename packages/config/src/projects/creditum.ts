@@ -21,7 +21,7 @@ export const creditum: Project = {
         gaugeWeights: 'There currently is no such thing implemented. It could be that this will be implemented in the future.',
         rewards: 'Having veCREDIT also gives its holder the right to receive a share of the platform revenue. A total of 75% of the revenue stream will be shared with veCREDIT holders.',
         purpose: 'Exchange',
-        status: 'In progress',
+        status: 'On',
         links: {
             websites: ['https://revenantlabs.io'],
             apps: [''],
@@ -36,7 +36,7 @@ export const creditum: Project = {
         },
         technology: {
             category: {
-                name: 'Interest Rate',
+                name: 'Yield',
                 details: 'creditum',
             },
             stateCorrectness: {

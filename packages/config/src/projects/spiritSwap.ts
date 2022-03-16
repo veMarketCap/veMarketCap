@@ -21,7 +21,7 @@ export const spiritSwap: Project = {
         gaugeWeights: 'Holders of inSPIRIT have the right to vote on how the rewards will be distributed over the multiple farms on the platform.',
         rewards: 'Holders of inSPIRIT will get up to a 2.5x boost of their farming rewards for their own liquidity provision, and will also get 16.6% share of the trading fees of the SpiritSwap platform.',
         purpose: 'Exchange',
-        status: 'On',
+        status: 'In progress',
         links: {
             websites: ['https://www.spiritswap.finance'],
             apps: [''],

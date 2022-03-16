@@ -1,6 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import l2Data from "@vemarketcap/backend";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import { getTokenBySymbol, Project } from '@vemarketcap/config'
 
 import { ChartData, L2Data, ProjectData } from '../../../L2Data'
@@ -78,6 +80,8 @@ function getFinancialViewEntry(
     sevenDayChange: getPercentageChange(tvl, tvlSevenDaysAgo),
     marketShare: formatPercent(tvl / aggregateTvl),
     purpose: project.details.purpose,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     technology: getTechnology(project),
     status: project.details.status,
     chains: projectData.chains,
@@ -100,10 +104,10 @@ function getTVLBreakdown(
       other: 0,
     }
   }
-  let associated = 0
-  let ether = 0
-  let stable = 0
-  let other = 0
+  const associated = 0
+  const ether = 0
+  const stable = 0
+  const other = 0
   // for (const [token, data] of Object.entries(byToken)) {
   //   const tvl = getFromEnd(data.data, 0)[2]
   //   const category = getTokenBySymbol(token).category
