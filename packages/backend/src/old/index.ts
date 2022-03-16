@@ -8,6 +8,10 @@ import {calculateAggregate} from './helpers'
 
 let mappedData: any;
 let veTokenProjects: any = []
+let holdersCount: any = []
+let velockedUsd: any = []
+let vecontract: any = []
+let lockedUpPercentage: any = []
 const coinNames: Array<string> = projects.map((e: any) => e.slug);
 const datatypes: Array<string> = ["date", "usd", "eth"];
 const projectData: any = {
@@ -19,7 +23,7 @@ const fetchDefillamaData = async () => {
         Promise.all(coinNames.map(async (item: any, i: any) => {
             return axios.get('https://api.llama.fi/protocol/' + item)
         })).then(res => {
-            res.forEach((e: any, i:number) => data(e.data, i))
+            res.forEach((e: any, i: number) => data(e.data, i))
             resolve(res)
         }).catch((error: AxiosError) => console.error(error))
     })
@@ -29,17 +33,31 @@ const fetchVetokenData = async () => {
     const res = await axios.get('https://model.vetoken.finance/v1/projects')
     const projects = res.data
 
-    const arr: Array<string> = []
-    coinNames.forEach((coin ,index) => {
+    const mcapTvlArr: Array<string> = []
+    const holdersCountArr: Array<string> = []
+    const velockedUsdArr: Array<string> = []
+    const vecontractArr: Array<string> = []
+    const velockedUpPercentage: any = []
+    coinNames.forEach((coin, index) => {
         const found = projects.find((project: any) => project.name.toLowerCase() === coin.toLowerCase())
 
-        arr.push(found?.mcapTvl || 0)
-
-        console.log(coin, found?.mcapTvl || 0)
+        mcapTvlArr.push(found?.mcapTvl || 0)
+        holdersCountArr.push(found?.holdersCount || 0)
+        velockedUsdArr.push(found?.velockedUsd || 0)
+        vecontractArr.push(found?.vecontract || 0)
+        velockedUpPercentage.push((found?.velockedUsd/found?.marketcap) || 0)
     })
 
-    veTokenProjects = arr
-    // console.log('veTokenProjects', veTokenProjects)
+    veTokenProjects = mcapTvlArr
+    holdersCount = holdersCountArr
+    velockedUsd = velockedUsdArr
+    vecontract = vecontractArr
+    lockedUpPercentage = velockedUpPercentage
+}
+
+const fetchCurveMarketData = async () => {
+    const res = await axios.get('https://curvemarketcap.com/leaderboard.json');
+    projectData.curveMarket = res.data.data
 }
 
 const data = (coinData: any, index: number) => {
@@ -57,13 +75,18 @@ const data = (coinData: any, index: number) => {
             types: datatypes
         },
         chains: coinData.chains,
-        mcapTvl: veTokenProjects[index]
+        mcapTvl: veTokenProjects[index],
+        velockedUsd: velockedUsd[index],
+        holdersCount: holdersCount[index],
+        lockedUpPercentage: lockedUpPercentage[index],
+        vecontract: vecontract[index]
     }
 }
 
 (async () => {
     await fetchVetokenData()
     await fetchDefillamaData()
+    await fetchCurveMarketData()
 
     const aggregate = calculateAggregate(projectData)
     const data = Object.assign({}, projectData, {aggregate})

@@ -2,6 +2,7 @@ export interface L2Data {
   aggregate: ChartData
   byProject: Record<string, ProjectData>
   experimental: Record<string, ExperimentalData>
+  curveMarket: any
 }
 
 export interface ProjectData {
@@ -9,6 +10,11 @@ export interface ProjectData {
   byToken: Record<string, ChartData>
   chains: Array<string>
   mcapTvl: string
+  lockedValueByTVL: string
+  velockedUsd: string
+  holdersCount: string
+  lockedUpPercentage: string
+  vecontract: string
 }
 
 export interface ChartData {
