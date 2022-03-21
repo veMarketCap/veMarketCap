@@ -22,20 +22,20 @@ export function Projects(props: Props) {
         title="Projects"
         className="Projects-Title"
       />
-      {/*<div className="Projects-Buttons">*/}
-      {/*  <button className="Projects-Button left active">*/}
-      {/*    <div className="Projects-ButtonInside">*/}
-      {/*      /!*<FinanceIcon />*!/*/}
-      {/*      Overview*/}
-      {/*    </div>*/}
-      {/*  </button>*/}
-      {/*  <button className="Projects-Button right">*/}
-      {/*    <div className="Projects-ButtonInside">*/}
-      {/*      /!*<ShieldWarnIcon />*!/*/}
-      {/*      Details*/}
-      {/*    </div>*/}
-      {/*  </button>*/}
-      {/*</div>*/}
+      <div className="Projects-Buttons">
+        <button className="Projects-Button left active">
+          <div className="Projects-ButtonInside">
+            {/*<FinanceIcon />*/}
+            Overview
+          </div>
+        </button>
+        <button className="Projects-Button right">
+          <div className="Projects-ButtonInside">
+            {/*<ShieldWarnIcon />*/}
+            Details
+          </div>
+        </button>
+      </div>
       <FinancialView {...props.financialView} />
       <RiskView {...props.riskView} />
     </section>

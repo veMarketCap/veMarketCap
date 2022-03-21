@@ -18,6 +18,7 @@ export interface RiskViewEntry {
     holdersCount: string
     lockedUpPercentage: string
     vecontract: string
+    status: string
 }
 
 export function RiskView({items}: RiskViewProps) {
@@ -60,7 +61,7 @@ export function RiskView({items}: RiskViewProps) {
     const columns: Column<RiskViewEntry>[] = [
         {
             name: 'Name',
-            getValue: (project) => <ProjectLink project={project}/>,
+            getValue: (project) => <ProjectLink project={project}/>
         },
         // {
         //     name: 'Locked Value/TVL',
@@ -77,7 +78,12 @@ export function RiskView({items}: RiskViewProps) {
         },
         {
             name: 'locked up%',
-            getValue: (project) => parseFloat(project.lockedUpPercentage).toFixed(2),
+            getValue: (project) => {
+                if (project.lockedUpPercentage == null) {
+                    return '?'
+                }
+                return parseFloat(project.lockedUpPercentage).toFixed(2)
+            },
         },
         {
             name: 'veContract',
@@ -108,19 +114,10 @@ export function RiskView({items}: RiskViewProps) {
             },
         },
     ]
-
+    const filteredItems = items.filter(item => item.status == 'On')
     return (
         <div className="RiskView">
-            <TableView items={items} columns={columns}/>
-            {/*<div className="RiskView-Symbols">*/}
-            {/*  <p>*/}
-            {/*    <StarkWareIcon /> &ndash; This project is built using StarkEx.*/}
-            {/*  </p>*/}
-            {/*  <p>*/}
-            {/*    <OptimismIcon /> &ndash; This project is based on Optimism&apos;s code*/}
-            {/*    base.*/}
-            {/*  </p>*/}
-            {/*</div>*/}
+            <TableView items={filteredItems} columns={columns}/>
         </div>
     )
 }

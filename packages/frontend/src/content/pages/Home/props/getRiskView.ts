@@ -28,6 +28,7 @@ export function getRiskViewEntry(
     velockedUsd: projectData.velockedUsd,
     holdersCount: projectData.holdersCount,
     lockedUpPercentage: projectData.lockedUpPercentage,
-    vecontract: projectData.vecontract
+    vecontract: projectData.vecontract,
+    status: project.details.status
   }
 }
