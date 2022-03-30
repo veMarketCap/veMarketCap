@@ -45,7 +45,7 @@ const fetchVetokenData = async () => {
         holdersCountArr.push(found?.holdersCount || 0)
         velockedUsdArr.push(found?.velockedUsd || 0)
         vecontractArr.push(found?.vecontract || 0)
-        velockedUpPercentage.push((found?.velockedUsd/found?.marketcap) || 0)
+        velockedUpPercentage.push((found?.veTotalSupply/found?.circulationSupply) || 0)
     })
 
     veTokenProjects = mcapTvlArr

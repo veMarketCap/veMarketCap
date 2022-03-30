@@ -74,15 +74,20 @@ export function RiskView({items}: RiskViewProps) {
         },
         {
             name: 'Holders Count',
-            getValue: (project) => convertNumber(project.holdersCount, 10),
+            getValue: (project) => {
+                if (project.holdersCount == '0') {
+                    return '?'
+                }
+                return project.holdersCount
+            }
         },
         {
             name: 'locked up%',
             getValue: (project) => {
-                if (project.lockedUpPercentage == null) {
+                if (project.lockedUpPercentage == null || project.lockedUpPercentage == '0') {
                     return '?'
                 }
-                return parseFloat(project.lockedUpPercentage).toFixed(2)
+                return parseFloat(project.lockedUpPercentage).toFixed(4)
             },
         },
         {
