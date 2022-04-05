@@ -30,7 +30,7 @@ const fetchDefillamaData = async () => {
 }
 
 const fetchVetokenData = async () => {
-    const res = await axios.get('https://model.vetoken.finance/v1/projects')
+    const res = await axios.get('http://127.0.0.1:9999/v1/projects')
     const projects = res.data
 
     const mcapTvlArr: Array<string> = []
@@ -40,12 +40,16 @@ const fetchVetokenData = async () => {
     const velockedUpPercentage: any = []
     coinNames.forEach((coin, index) => {
         const found = projects.find((project: any) => project.name.toLowerCase() === coin.toLowerCase())
+        console.log(found?.name)
+        console.log(found?.veTotalSupply)
+        console.log(found?.circulationSupply)
+        console.log('found?.veTotalSupply / found?.circulationSupply', (found?.veTotalSupply / (found?.circulationSupply) * 100) || 0)
 
         mcapTvlArr.push(found?.mcapTvl || 0)
         holdersCountArr.push(found?.holdersCount || 0)
         velockedUsdArr.push(found?.velockedUsd || 0)
         vecontractArr.push(found?.vecontract || 0)
-        velockedUpPercentage.push((found?.veTotalSupply/found?.circulationSupply) || 0)
+        velockedUpPercentage.push(((found?.veTotalSupply / found?.circulationSupply) * 100) || 0)
     })
 
     veTokenProjects = mcapTvlArr

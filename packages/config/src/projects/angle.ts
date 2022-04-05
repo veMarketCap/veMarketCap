@@ -1,11 +1,3 @@
-import {
-    CONTRACTS,
-    DATA_AVAILABILITY,
-    EXITS,
-    FORCE_TRANSACTIONS,
-    OPERATOR,
-    STATE_CORRECTNESS,
-} from './common'
 import { Project } from './types'
 
 export const angle: Project = {
@@ -39,41 +31,6 @@ export const angle: Project = {
                 name: 'Yield',
                 details: 'angle',
             },
-            stateCorrectness: {
-                ...STATE_CORRECTNESS.FRAUD_PROOFS,
-                isIncomplete: true,
-            },
-            dataAvailability: {
-                ...DATA_AVAILABILITY.PLASMA_OFF_CHAIN,
-                isIncomplete: true,
-            },
-            operator: {
-                ...OPERATOR.CENTRALIZED_OPERATOR,
-                isIncomplete: true,
-            },
-            forceTransactions: {
-                ...FORCE_TRANSACTIONS.WITHDRAW,
-                isIncomplete: true,
-            },
-            exitMechanisms: [
-                {
-                    ...EXITS.PLASMA,
-                    isIncomplete: true,
-                },
-            ],
-            massExit: {
-                name: 'The mass exit problem is unsolved',
-                description:
-                    'In case the operator is malicious all users need to exit within a predetermined time frame. Users that do not manage to do this will lose their funds.',
-                references: [],
-                risks: [
-                    {
-                        category: 'Funds can be stolen if',
-                        text: 'users are unable to withdraw in a mass exit event.',
-                    },
-                ],
-                isIncomplete: true,
-            },
             contracts: {
                 addresses: [
                     {
@@ -81,7 +38,6 @@ export const angle: Project = {
                         address: '0x31429d1856aD1377A8A0079410B297e1a9e214c2',
                     }
                 ],
-                risks: [CONTRACTS.UPGRADE_NO_DELAY_RISK],
             },
         },
     },

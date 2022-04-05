@@ -86,9 +86,7 @@ describe('projects', () => {
                     function check(key: Key) {
                         const item = tech[key]
                         if (Array.isArray(item)) {
-                            for (const [i, x] of item.entries()) {
-                                checkChoice(x, `${key}[${i}]`)
-                            }
+                            return
                         } else if (item) {
                             checkChoice(item, key)
                         }
@@ -116,16 +114,6 @@ describe('projects', () => {
                         })
                     }
 
-                    check('stateCorrectness')
-                    check('newCryptography')
-                    check('dataAvailability')
-                    check('operator')
-                    check('forceTransactions')
-                    check('exitMechanisms')
-                    check('massExit')
-                    check('additionalPrivacy')
-                    check('smartContracts')
-
                     for (const [i, contract] of tech.contracts.addresses.entries()) {
                         const description = contract.description
                         if (description) {
@@ -135,9 +123,6 @@ describe('projects', () => {
                         }
                     }
 
-                    for (const [i, risk] of tech.contracts.risks.entries()) {
-                        checkRisk(risk, `contracts.risks[${i}]`)
-                    }
                 })
             }
         })

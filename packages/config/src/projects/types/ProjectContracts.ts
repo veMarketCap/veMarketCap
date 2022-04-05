@@ -3,8 +3,6 @@ import { ProjectRisk } from './ProjectRisk'
 export interface ProjectContracts {
   /** List of the contracts */
   addresses: ProjectContract[]
-  /** List of risks associated with the contracts */
-  risks: ProjectRisk[]
 }
 
 export interface ProjectContract {

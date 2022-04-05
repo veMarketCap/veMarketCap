@@ -1,11 +1,3 @@
-import {
-    CONTRACTS,
-    DATA_AVAILABILITY,
-    EXITS,
-    FORCE_TRANSACTIONS,
-    OPERATOR,
-    STATE_CORRECTNESS,
-} from './common'
 import { Project } from './types'
 
 export const creditum: Project = {
@@ -39,49 +31,13 @@ export const creditum: Project = {
                 name: 'Yield',
                 details: 'creditum',
             },
-            stateCorrectness: {
-                ...STATE_CORRECTNESS.FRAUD_PROOFS,
-                isIncomplete: true,
-            },
-            dataAvailability: {
-                ...DATA_AVAILABILITY.PLASMA_OFF_CHAIN,
-                isIncomplete: true,
-            },
-            operator: {
-                ...OPERATOR.CENTRALIZED_OPERATOR,
-                isIncomplete: true,
-            },
-            forceTransactions: {
-                ...FORCE_TRANSACTIONS.WITHDRAW,
-                isIncomplete: true,
-            },
-            exitMechanisms: [
-                {
-                    ...EXITS.PLASMA,
-                    isIncomplete: true,
-                },
-            ],
-            massExit: {
-                name: 'The mass exit problem is unsolved',
-                description:
-                    'In case the operator is malicious all users need to exit within a predetermined time frame. Users that do not manage to do this will lose their funds.',
-                references: [],
-                risks: [
-                    {
-                        category: 'Funds can be stolen if',
-                        text: 'users are unable to withdraw in a mass exit event.',
-                    },
-                ],
-                isIncomplete: true,
-            },
             contracts: {
                 addresses: [
                     {
                         name: 'creditum',
                         address: '0x77128DFdD0ac859B33F44050c6fa272F34872B5E',
                     }
-                ],
-                risks: [CONTRACTS.UPGRADE_NO_DELAY_RISK],
+                ]
             },
         },
     },

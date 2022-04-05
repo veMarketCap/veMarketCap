@@ -119,7 +119,7 @@ export function RiskView({items}: RiskViewProps) {
             },
         },
     ]
-    const filteredItems = items.filter(item => item.status == 'On')
+    const filteredItems = items.filter(item => item.status == 'On' && item.name !== 'Saber')
     return (
         <div className="RiskView">
             <TableView items={filteredItems} columns={columns}/>

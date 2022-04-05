@@ -14,13 +14,13 @@ export interface TechnologyReference {
 }
 
 export function ReferencesSection({ items }: ReferencesSectionProps) {
-  if (items.length === 0) {
+  if (items?.length === 0) {
     return null
   }
   return (
     <Section title="References" id="references" className="ReferencesSection">
       <ol className="ReferencesSection-List">
-        {items.map((item, i) => (
+        {items?.map((item, i) => (
           <li key={i} id={`reference-${item.id}`}>
             <OutLink href={item.href}>{item.text}</OutLink>
           </li>
