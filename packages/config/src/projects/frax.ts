@@ -1,12 +1,4 @@
-import {
-    CONTRACTS,
-    DATA_AVAILABILITY,
-    EXITS,
-    FORCE_TRANSACTIONS,
-    OPERATOR,
-    STATE_CORRECTNESS,
-} from './common'
-import { Project } from './types'
+import {Project} from './types'
 
 export const frax: Project = {
     name: 'Frax',
@@ -42,9 +34,29 @@ export const frax: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Frax',
+                        name: 'Gauge Proxy',
+                        address: '',
+                    },
+                    {
+                        name: 'Gauge Controller',
+                        address: '',
+                    },
+                    {
+                        name: 'Voting Escrow (veFXS Token)',
+                        address: '0xc8418aF6358FFddA74e09Ca9CC3Fe03Ca6aDC5b0',
+                    },
+                    {
+                        name: 'DistributorProxy (Minter)',
+                        address: '',
+                    },
+                    {
+                        name: 'FXS Token',
                         address: '0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: 'Fee Distributor',
+                    },
                 ],
             }
         },

@@ -16,7 +16,7 @@ export function LinkSectionLinks({ name, links, social }: Props) {
     <tr>
       <th>{name}</th>
       <td>
-        {links.map((x, i) => (
+        {links?.map((x, i) => (
           <LinkSectionLink key={i} href={x} social={social} />
         ))}
       </td>

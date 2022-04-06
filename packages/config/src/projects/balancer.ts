@@ -37,9 +37,25 @@ export const balancer: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'balancer',
+                        name: 'Gauge Controller',
+                        address: '0xC128468b7Ce63eA702C1f104D55A2566b13D3ABD',
+                    },
+                    {
+                        name: 'Voting Escrow (veBAL Token)',
+                        address: '0xC128a9954e6c874eA3d62ce62B468bA073093F25',
+                    },
+                    {
+                        name: 'Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'BAL Token',
                         address: '0xba100000625a3754423978a60c9317c58a424e3D',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '',
+                    },
                 ],
             },
         },

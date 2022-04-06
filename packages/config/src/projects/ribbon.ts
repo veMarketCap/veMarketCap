@@ -47,9 +47,25 @@ export const ribbon: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Ribbon Finance',
-                        address: '0x6123B0049F904d730dB3C36a31167D9d4121fA6B',
-                    }
+                        name: 'Gauge Controller',
+                        address: '0x0cb9cc35cEFa5622E8d25aF36dD56DE142eF6415',
+                    },
+                    {
+                        name: 'Voting Escrow (veRBN Token)',
+                        address: '0x19854C9A5fFa8116f48f984bDF946fB9CEa9B5f7',
+                    },
+                    {
+                        name: 'Minter',
+                        address: '0x5B0655F938A72052c46d2e94D206ccB6FF625A3A',
+                    },
+                    {
+                        name: 'RBN Token',
+                        address: '0x6123b0049f904d730db3c36a31167d9d4121fa6b',
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0x29893Bcd1fdA6da4f29D0e21edc55Abc3A29A202',
+                    },
                 ],
             },
         },

@@ -41,9 +41,29 @@ export const idleFinance: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Idle Finance',
+                        name: 'Gauge Proxy',
+                        address: '0xBb1CB94F14881DDa38793d7F6F99d96Db0594051',
+                    },
+                    {
+                        name: 'Gauge Controller',
+                        address: '0xaC69078141f76A1e257Ee889920d02Cc547d632f',
+                    },
+                    {
+                        name: 'Voting Escrow (veCRV Token)',
+                        address: '0xaac13a116ea7016689993193fce4badc8038136f',
+                    },
+                    {
+                        name: 'DistributorProxy (Minter)',
+                        address: '0xd061D61a4d941c39E5453435B6345Dc261C2fcE0',
+                    },
+                    {
+                        name: 'IDLE Token',
                         address: '0x875773784Af8135eA0ef43b5a374AaD105c5D39e',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0xbabb82456c013fd7e3f25857e0729de8207f80e2',
+                    },
                 ],
             },
         },

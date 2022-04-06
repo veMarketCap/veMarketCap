@@ -1,20 +1,21 @@
 import React from 'react'
 
-import {BenefitSection,BenefitSectionProps} from './BenefitSection'
+import {BenefitSection, BenefitSectionProps} from './BenefitSection'
 import {ContractsSection, ContractsSectionProps} from './ContractsSection'
 import {
     DescriptionSection,
     DescriptionSectionProps,
 } from './DescriptionSection'
-import {GaugeWeightSection,GaugeWeightSectionProps} from './GaugeWeightSection'
+import {GaugeWeightSection, GaugeWeightSectionProps} from './GaugeWeightSection'
 import {LinkSection, LinkSectionProps} from './links/LinkSection'
 import {NewsSection, NewsSectionProps} from './NewsSection'
 import {ReferencesSection, ReferencesSectionProps} from './ReferencesSection'
-import {RewardSection,RewardSectionProps} from './RewardSection'
+import {RewardSection, RewardSectionProps} from './RewardSection'
 import {RiskSection, RiskSectionProps} from './RiskSection'
 import {TechnologyIncomplete, TechnologyIncompleteProps} from './TechnologyIncomplete'
 import {TechnologySection, TechnologySectionProps} from './TechnologySection'
-import {VotingSection,VotingSectionProps} from './VotingSection'
+import {VotingSection, VotingSectionProps} from './VotingSection'
+import {AddressSection, AddressSectionProps} from "./links/addressSection";
 
 export interface ProjectDetailsProps {
     linkSection: LinkSectionProps
@@ -28,13 +29,14 @@ export interface ProjectDetailsProps {
     votingSection: VotingSectionProps
     gaugeWeightSection: GaugeWeightSectionProps
     rewardSection: RewardSectionProps
+    addressSection: AddressSectionProps
 }
 
 export function ProjectDetails(props: ProjectDetailsProps) {
     return (
         <main className="ProjectDetails">
             <LinkSection {...props.linkSection} />
-            {/*<NewsSection {...props.newsSection} />*/}
+            <AddressSection {...props.addressSection} />
             <div className="ProjectDetails-Content">
                 <DescriptionSection {...props.descriptionSection} />
                 <BenefitSection {...props.benefitSection} />

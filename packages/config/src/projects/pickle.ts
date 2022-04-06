@@ -42,9 +42,29 @@ export const pickle: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Pickle',
+                        name: 'Gauge Proxy',
+                        address: '',
+                    },
+                        {
+                        name: 'Gauge Controller',
+                        address: ' 0x2e57627ACf6c1812F99e274d0ac61B786c19E74f',
+                    },
+                    {
+                        name: 'Voting Escrow (DILL Token)',
+                        address: '0xbBCf169eE191A1Ba7371F30A1C344bFC498b29Cf',
+                    },
+                    {
+                        name: 'DistributorProxy (Minter)',
+                        address: '',
+                    },
+                    {
+                        name: 'PICKLE Token',
                         address: '0x429881672B9AE42b8EbA0E26cD9C73711b891Ca5',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0x74C6CadE3eF61d64dcc9b97490d9FbB231e4BdCc',
+                    },
                 ],
             },
         },

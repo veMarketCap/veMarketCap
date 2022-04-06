@@ -34,9 +34,25 @@ export const angle: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Angle',
+                        name: 'Gauge Controller',
+                        address: '0x9aD7e7b0877582E14c17702EecF49018DD6f2367',
+                    },
+                    {
+                        name: 'Voting Escrow (veANGLE Token)',
+                        address: '0x0C462Dbb9EC8cD1630f1728B2CFD2769d09f0dd5',
+                    },
+                    {
+                        name: 'Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'ANGLE Token',
                         address: '0x31429d1856aD1377A8A0079410B297e1a9e214c2',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0x7F82ff050128e29Fd89D85d01b93246F744E62A0',
+                    },
                 ],
             },
         },

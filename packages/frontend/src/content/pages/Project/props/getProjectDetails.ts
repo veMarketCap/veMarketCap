@@ -12,6 +12,7 @@ import {getRewardSection} from "./getRewardSection";
 import { getRiskSection } from './getRiskSection'
 import { getTechnologyOverview } from './getTechnologyOverview'
 import { getVotingSection } from './getVotingSection'
+import { getAddressSection } from './getAddressSection'
 
 export function getProjectDetails(
   project: Project,
@@ -26,5 +27,6 @@ export function getProjectDetails(
     gaugeWeightSection: getGaugeWeightSection(project),
     rewardSection: getRewardSection(project),
     ...getTechnologyOverview(project),
+    addressSection: getAddressSection(project)
   }
 }
