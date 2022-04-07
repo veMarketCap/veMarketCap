@@ -24,7 +24,7 @@ export const balancer: Project = {
         gaugeWeights: 'There will be a gauge weight system in place which can be used by veBAL holders to direct the emission of new tokens to certain pools.',
         rewards: 'There will also be a form of revenue share according to the proposal. It now suggests to share 75% of the revenue accrued by the platform with the holders of veBAL.',
         purpose: 'Exchange',
-        status: 'In progress',
+        status: 'On',
         links: {
             websites: ['https://balancer.fi'],
             apps: [''],
