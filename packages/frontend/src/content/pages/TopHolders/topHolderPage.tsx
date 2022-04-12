@@ -16,9 +16,6 @@ export interface ProjectPageProps {
 }
 
 export function TopHolderPage(props: ProjectPageProps) {
-    // console.log('props.metadata', props.metadata)
-    // console.log('props.header', props.header)
-    // console.log('l2Data.byProject[props.header.title].topHolders', l2Data.byProject[props.header.title].topHolders)
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const data: any = l2Data.byProject[props.header.title].topHolders;
