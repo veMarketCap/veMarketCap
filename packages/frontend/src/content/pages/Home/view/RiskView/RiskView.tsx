@@ -14,11 +14,12 @@ export interface RiskViewEntry {
     name: string
     slug: string
     lockedValueByTVL: string
-    velockedUsd: string
+    velocked: string
     holdersCount: string
     lockedUpPercentage: string
     vecontract: string
     status: string
+    veTotalSupply: string
 }
 
 export function RiskView({items}: RiskViewProps) {
@@ -69,8 +70,8 @@ export function RiskView({items}: RiskViewProps) {
         //     getValue: (project) => project.lockedValueByTVL,
         // },
         {
-            name: 'veLockedUsd',
-            getValue: (project) => convertNumber(project.velockedUsd, 2),
+            name: 'veLocked',
+            getValue: (project) => convertNumber(project.velocked, 2),
         },
         {
             name: 'Holders Count',
@@ -82,14 +83,18 @@ export function RiskView({items}: RiskViewProps) {
             }
         },
         {
-            name: 'locked up%',
-            getValue: (project) => {
-                if (project.lockedUpPercentage == null || project.lockedUpPercentage == '0') {
-                    return '?'
-                }
-                return parseFloat(project.lockedUpPercentage).toFixed(4)
-            },
+            name: 'Total Supply',
+            getValue: (project) => convertNumber(project.veTotalSupply, 2),
         },
+        // {
+        //     name: 'locked up%',
+        //     getValue: (project) => {
+        //         if (project.lockedUpPercentage == null || project.lockedUpPercentage == '0') {
+        //             return '?'
+        //         }
+        //         return parseFloat(project.lockedUpPercentage).toFixed(4)
+        //     },
+        // },
         {
             name: 'veContract',
             getValue: (project) => {
@@ -119,7 +124,7 @@ export function RiskView({items}: RiskViewProps) {
             },
         },
     ]
-    const filteredItems = items.filter(item => item.status == 'On' && item.name !== 'Saber')
+    const filteredItems = items.filter(item => item.status == 'On' && item.name !== 'Saber' && item.holdersCount !== '0' && item.velocked.toString() !== '0')
     return (
         <div className="RiskView">
             <TableView items={filteredItems} columns={columns}/>

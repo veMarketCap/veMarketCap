@@ -20,19 +20,22 @@ export function AddressSection(props: AddressSectionProps) {
             </h2>
             <table className="LinkSection-Table">
                 <tbody>
-                {props.addresses.map(({address, name}) => {
-                    return (
-                        <tr>
-                            <th>
-                                {name}&nbsp;&nbsp;&nbsp;
-                            </th>
-                            <td>
-                                {address ? <a href={`https://etherscan.io/address/${address}`}
-                                              target={'_blank'}>{address.slice(0, 9)}.....{address.slice(-9, -1)}</a> : ''}
-                            </td>
-                        </tr>
-                    )
-                })}
+                {
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    props.addresses.map(({address, name}) => {
+                        return (
+                            <tr>
+                                <th>
+                                    {name}&nbsp;&nbsp;&nbsp;
+                                </th>
+                                <td>
+                                    {address ? <a href={`https://etherscan.io/address/${address}`}
+                                                  target={'_blank'}>{address.slice(0, 9)}.....{address.slice(-9, -1)}</a> : ''}
+                                </td>
+                            </tr>
+                        )
+                    })}
                 </tbody>
             </table>
             {/*<ExperimentalStats {...props.experimentalStats7d} />*/}

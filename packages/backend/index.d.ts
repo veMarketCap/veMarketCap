@@ -5,6 +5,8 @@ interface OutputData {
 }
 
 interface ProjectData {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     chains: ((project) => string) | ((project) => JSX.Element) | ((project) => JSX.Element) | ((project) => string) | ((project) => JSX.Element) | ((value: FinancialViewEntry) => React.ReactChild);
   aggregate: Chart
   byToken: Record<string, Chart>

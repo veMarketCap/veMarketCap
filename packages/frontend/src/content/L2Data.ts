@@ -11,10 +11,11 @@ export interface ProjectData {
   chains: Array<string>
   mcapTvl: string
   lockedValueByTVL: string
-  velockedUsd: string
+  velocked: string
   holdersCount: string
   lockedUpPercentage: string
   vecontract: string
+  veTotalSupply: string
 }
 
 export interface ChartData {

@@ -25,10 +25,11 @@ export function getRiskViewEntry(
     name: project.name,
     slug: project.slug,
     lockedValueByTVL: projectData.lockedValueByTVL,
-    velockedUsd: projectData.velockedUsd,
+    velocked: projectData.velocked,
     holdersCount: projectData.holdersCount,
     lockedUpPercentage: projectData.lockedUpPercentage,
     vecontract: projectData.vecontract,
-    status: project.details.status
+    status: project.details.status,
+    veTotalSupply: projectData.veTotalSupply
   }
 }

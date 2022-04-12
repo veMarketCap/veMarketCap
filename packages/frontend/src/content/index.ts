@@ -10,6 +10,10 @@ main().catch((e) => {
 })
 
 async function main() {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   createApi(projects, l2Data)
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   await renderPages(projects, l2Data)
 }
