@@ -16,39 +16,41 @@ export interface ProjectPageProps {
 }
 
 export function TopHolderPage(props: ProjectPageProps) {
-    console.log('props.metadata', props.metadata)
-    console.log('props.header', props.header)
-    // console.log('l2Data.byProject[props.header.title].topHolders', l2Data.byProject[props.header.title].topHolders)
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    const data: any = l2Data.byProject[props.header.title].topHolders;
-    // console.log('Object.keys(data).map(e => [Number(e), data[e]])', Object.entries(data))
-    // console.log('data', data)
+    const topHolders: any = Object.keys(l2Data.byProject[props.header.title].topHolders).map(key => {
+        return {
+            address: key,
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            amount: (l2Data.byProject[props.header.title].topHolders)[key]
+        }
+    })
+
     return (
         <>
             {
-                data ? (
+                topHolders ? (
                     <Page metadata={props.metadata}>
                         <Navbar/>
-                        <Header title={'Ranked by Daily Total Profits'} /><br/>
+                        <Header {...props.header} /><br/>
                         <table className="TableView-Table-marketcap">
                             <thead className="TableView-Header">
                             <tr>
                                 <th>Ranking</th>
                                 <th>Address</th>
-                                <th>Annualized Returns</th>
-                                <th>veCRV</th>
-                                <th>Balance</th>
-                                <th>Daily Total Profits</th>
+                                <th>Amount</th>
                             </tr>
                             </thead>
                             <tbody className="TableView-Body">
-                            {/*{data?.map((item: any, i: number) => (*/}
-                            {/*    <tr>*/}
-                            {/*        <td>{i}</td>*/}
-                            {/*        <td>{item.address}</td>*/}
-                            {/*    </tr>*/}
-                            {/*))}*/}
+                            {topHolders?.map((item: any, i: number) => (
+                                <tr>
+                                    <td>{i}</td>
+                                    <td>{(item.address)}</td>
+                                    <td>{parseInt(item.amount.hex)}</td>
+                                </tr>
+                            ))}
                             </tbody>
                         </table>
                         <Footer/>

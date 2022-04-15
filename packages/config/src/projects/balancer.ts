@@ -8,8 +8,9 @@ export const balancer: Project = {
     details: {
         description:
             [
-                'Balancer is a community-driven protocol, automated portfolio manager, liquidity provider, and price sensor that empowers decentralized exchange and automated portfolio management of tokens.',
-                'Balancer Pools contain two or more tokens that traders can swap between. Balancer adopts multiple features to slash gas costs, super-charge capital efficiency, unlock arbitrage with zero-token starting capital, and open the door to custom AMMs.'
+                'Balancer is a community-driven protocol, automated portfolio manager, liquidity provider, and price sensor that empowers decentralized exchange and the automated portfolio management of tokens on the Ethereum blockchain and other EVM compatible systems.',
+                'Balancer Pools contains two or more tokens that traders can swap between. Liquidity Providers put their tokens in the pools in order to collect swap fees.',
+                'Balancer adopts powerful features to slash gas costs, super-charge capital efficiency, unlock arbitrage with zero-token starting capital, and open the door to custom AMMs.'
             ],
         benefits: 'Having veBAL offers a few opportunities for its holders compared to just having BAL.',
         voting: 'When voting, veBAL will be used to account for the amount of votes instead of BAL. This applies to the on-chain votes or votes on snapshot based.',

@@ -50,7 +50,7 @@ export function ProjectDetails(props: ProjectDetailsProps) {
                 {/*))}*/}
                 {/*<ContractsSection {...props.contractsSection} />*/}
             </div>
-            <ReferencesSection {...props.referencesSection} />
+            {/*<ReferencesSection {...props.referencesSection} />*/}
         </main>
     )
 }
