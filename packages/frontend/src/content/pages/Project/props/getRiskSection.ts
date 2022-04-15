@@ -6,32 +6,8 @@ import { RiskSectionProps } from '../view/RiskSection'
 
 export function getRiskSection(project: Project): RiskSectionProps {
   const technology = project.details.technology
-  const exits =
-    technology?.exitMechanisms.map((x:any, i:number) => ({
-      id: `exit-mechanisms-${i + 1}`,
-      value: x,
-    })) ?? []
-  const sections = [
-    { id: 'state-correctness', value: technology?.stateCorrectness },
-    { id: 'data-availability', value: technology?.dataAvailability },
-    { id: 'new-cryptography', value: technology?.newCryptography },
-    { id: 'mass-exit', value: technology?.massExit },
-    { id: 'additional-privacy', value: technology?.additionalPrivacy },
-    { id: 'smart-contracts', value: technology?.smartContracts },
-    { id: 'operator', value: technology?.operator },
-    { id: 'force-transactions', value: technology?.forceTransactions },
-    ...exits,
-  ]
 
   const risks: (ProjectRisk & { referencedId: string })[] = []
-  for (const { id, value } of sections) {
-    if (value) {
-      risks.push(...value.risks.map((x:any) => ({ ...x, referencedId: id })))
-    }
-  }
-  for (const risk of technology?.contracts.risks ?? []) {
-    risks.push({ ...risk, referencedId: 'contracts' })
-  }
 
   const categories: ProjectRiskCategory[] = [
     'Funds can be stolen if',

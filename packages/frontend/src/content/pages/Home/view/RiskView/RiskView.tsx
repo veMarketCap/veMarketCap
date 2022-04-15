@@ -14,10 +14,12 @@ export interface RiskViewEntry {
     name: string
     slug: string
     lockedValueByTVL: string
-    velockedUsd: string
+    velocked: string
     holdersCount: string
     lockedUpPercentage: string
     vecontract: string
+    status: string
+    veTotalSupply: string
 }
 
 export function RiskView({items}: RiskViewProps) {
@@ -60,7 +62,7 @@ export function RiskView({items}: RiskViewProps) {
     const columns: Column<RiskViewEntry>[] = [
         {
             name: 'Name',
-            getValue: (project) => <ProjectLink project={project}/>,
+            getValue: (project) => <ProjectLink project={project}/>
         },
         // {
         //     name: 'Locked Value/TVL',
@@ -68,17 +70,31 @@ export function RiskView({items}: RiskViewProps) {
         //     getValue: (project) => project.lockedValueByTVL,
         // },
         {
-            name: 'veLockedUsd',
-            getValue: (project) => convertNumber(project.velockedUsd, 2),
+            name: 'veLocked',
+            getValue: (project) => convertNumber(project.velocked, 2),
         },
         {
             name: 'Holders Count',
-            getValue: (project) => convertNumber(project.holdersCount, 10),
+            getValue: (project) => {
+                if (project.holdersCount == '0') {
+                    return '?'
+                }
+                return project.holdersCount
+            }
         },
         {
-            name: 'locked up%',
-            getValue: (project) => parseFloat(project.lockedUpPercentage).toFixed(2),
+            name: 'Total Supply',
+            getValue: (project) => convertNumber(project.veTotalSupply, 2),
         },
+        // {
+        //     name: 'locked up%',
+        //     getValue: (project) => {
+        //         if (project.lockedUpPercentage == null || project.lockedUpPercentage == '0') {
+        //             return '?'
+        //         }
+        //         return parseFloat(project.lockedUpPercentage).toFixed(4)
+        //     },
+        // },
         {
             name: 'veContract',
             getValue: (project) => {
@@ -108,19 +124,10 @@ export function RiskView({items}: RiskViewProps) {
             },
         },
     ]
-
+    const filteredItems = items.filter(item => item.status == 'On' && item.name !== 'Saber' && item.holdersCount !== '0' && item.velocked.toString() !== '0')
     return (
         <div className="RiskView">
-            <TableView items={items} columns={columns}/>
-            {/*<div className="RiskView-Symbols">*/}
-            {/*  <p>*/}
-            {/*    <StarkWareIcon /> &ndash; This project is built using StarkEx.*/}
-            {/*  </p>*/}
-            {/*  <p>*/}
-            {/*    <OptimismIcon /> &ndash; This project is based on Optimism&apos;s code*/}
-            {/*    base.*/}
-            {/*  </p>*/}
-            {/*</div>*/}
+            <TableView items={filteredItems} columns={columns}/>
         </div>
     )
 }

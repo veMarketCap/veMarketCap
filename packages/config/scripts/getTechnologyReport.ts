@@ -20,22 +20,6 @@ for (const key of keys) {
   report += `------- ${uppercase} -------\n\n`
 
   const options = new Map<string, string[]>()
-  for (const project of projects) {
-    const item = project.details.technology?.[key]
-    if (item) {
-      const signature = JSON.stringify({
-        name: item.name,
-        description: item.description,
-        risks: item.risks,
-      })
-      const existing = options.get(signature)
-      if (existing) {
-        existing.push(project.name)
-      } else {
-        options.set(signature, [project.name])
-      }
-    }
-  }
 
   for (const [signature, names] of options.entries()) {
     const decoded: Omit<ProjectTechnologyChoice, 'references'> =

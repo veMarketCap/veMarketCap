@@ -18,8 +18,14 @@
     grid-area: tech;
   }
 
-  .NewsSection {
+  .AddressSection {
     grid-area: news;
+    & h2 {
+      margin-bottom: -10px;
+    }
+    & .LinkSection-Table {
+      background: #2f2f2f;
+    }
   }
 
   .ReferencesSection {

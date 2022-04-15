@@ -1,11 +1,3 @@
-import {
-    CONTRACTS,
-    DATA_AVAILABILITY,
-    EXITS,
-    FORCE_TRANSACTIONS,
-    OPERATOR,
-    STATE_CORRECTNESS,
-} from './common'
 import { Project } from './types'
 
 export const angle: Project = {
@@ -39,49 +31,29 @@ export const angle: Project = {
                 name: 'Yield',
                 details: 'angle',
             },
-            stateCorrectness: {
-                ...STATE_CORRECTNESS.FRAUD_PROOFS,
-                isIncomplete: true,
-            },
-            dataAvailability: {
-                ...DATA_AVAILABILITY.PLASMA_OFF_CHAIN,
-                isIncomplete: true,
-            },
-            operator: {
-                ...OPERATOR.CENTRALIZED_OPERATOR,
-                isIncomplete: true,
-            },
-            forceTransactions: {
-                ...FORCE_TRANSACTIONS.WITHDRAW,
-                isIncomplete: true,
-            },
-            exitMechanisms: [
-                {
-                    ...EXITS.PLASMA,
-                    isIncomplete: true,
-                },
-            ],
-            massExit: {
-                name: 'The mass exit problem is unsolved',
-                description:
-                    'In case the operator is malicious all users need to exit within a predetermined time frame. Users that do not manage to do this will lose their funds.',
-                references: [],
-                risks: [
-                    {
-                        category: 'Funds can be stolen if',
-                        text: 'users are unable to withdraw in a mass exit event.',
-                    },
-                ],
-                isIncomplete: true,
-            },
             contracts: {
                 addresses: [
                     {
-                        name: 'Angle',
+                        name: 'Gauge Controller',
+                        address: '0x9aD7e7b0877582E14c17702EecF49018DD6f2367',
+                    },
+                    {
+                        name: 'Voting Escrow (veANGLE Token)',
+                        address: '0x0C462Dbb9EC8cD1630f1728B2CFD2769d09f0dd5',
+                    },
+                    {
+                        name: 'Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'ANGLE Token',
                         address: '0x31429d1856aD1377A8A0079410B297e1a9e214c2',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0x7F82ff050128e29Fd89D85d01b93246F744E62A0',
+                    },
                 ],
-                risks: [CONTRACTS.UPGRADE_NO_DELAY_RISK],
             },
         },
     },

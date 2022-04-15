@@ -16,10 +16,14 @@ export interface ProjectPageProps {
 }
 
 export function TopHolderPage(props: ProjectPageProps) {
+    console.log('props.metadata', props.metadata)
+    console.log('props.header', props.header)
+    // console.log('l2Data.byProject[props.header.title].topHolders', l2Data.byProject[props.header.title].topHolders)
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    const data: Array<object> = l2Data.curveMarket;
-
+    const data: any = l2Data.byProject[props.header.title].topHolders;
+    // console.log('Object.keys(data).map(e => [Number(e), data[e]])', Object.entries(data))
+    // console.log('data', data)
     return (
         <>
             {
@@ -39,16 +43,12 @@ export function TopHolderPage(props: ProjectPageProps) {
                             </tr>
                             </thead>
                             <tbody className="TableView-Body">
-                            {data?.map((item: any) => (
-                                <tr>
-                                    <td>{item.rank}</td>
-                                    <td>{item.public_address}</td>
-                                    <td>0</td>
-                                    <td>{item.vecrv}</td>
-                                    <td>{item.balance}</td>
-                                    <td>{item.profits}</td>
-                                </tr>
-                            ))}
+                            {/*{data?.map((item: any, i: number) => (*/}
+                            {/*    <tr>*/}
+                            {/*        <td>{i}</td>*/}
+                            {/*        <td>{item.address}</td>*/}
+                            {/*    </tr>*/}
+                            {/*))}*/}
                             </tbody>
                         </table>
                         <Footer/>
