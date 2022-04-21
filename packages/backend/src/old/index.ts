@@ -37,7 +37,7 @@ const fetchDefillamaData = async () => {
 }
 
 const fetchVetokenData = async () => {
-    const res = await axios.get('http://127.0.0.1:9999/v1/projects')
+    const res = await axios.get('https://model.vetoken.finance/v1/projects')
     const projects = res.data
 
     const mcapTvlArr: Array<string> = []
