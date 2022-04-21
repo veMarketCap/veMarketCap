@@ -42,9 +42,25 @@ export const snowball: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Snowball',
-                        address: '0xC38f41A296A4493Ff429F1238e030924A1542e50',
-                    }
+                        name: 'Gauge Controller',
+                        address: '0x215D5eDEb6A6a3f84AE9d72962FEaCCdF815BF27',
+                    },
+                    {
+                        name: 'Voting Escrow (xSNOB Token)',
+                        address: '0x83952E7ab4aca74ca96217D6F8f7591BEaD6D64E',
+                    },
+                    {
+                        name: ' Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'SNOB Token',
+                        address: '0xc38f41a296a4493ff429f1238e030924a1542e50',
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0xad86ef5fd2ebc25bb9db41a1fe8d0f2a322c7839',
+                    },
                 ],
             },
         },

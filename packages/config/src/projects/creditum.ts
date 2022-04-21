@@ -34,9 +34,25 @@ export const creditum: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'creditum',
+                        name: 'Gauge Controller',
+                        address: '',
+                    },
+                    {
+                        name: 'Voting Escrow (veCREDIT Token)',
+                        address: '0xdB49A1190778623A872254ECca3a7bFD997223cb',
+                    },
+                    {
+                        name: ' Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'CREDIT Token',
                         address: '0x77128DFdD0ac859B33F44050c6fa272F34872B5E',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '',
+                    },
                 ]
             },
         },

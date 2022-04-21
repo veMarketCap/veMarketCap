@@ -42,9 +42,25 @@ export const saber: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Saber',
+                        name: 'Gauge Controller',
+                        address: '',
+                    },
+                    {
+                        name: 'Voting Escrow (veSaber Token)',
+                        address: '',
+                    },
+                    {
+                        name: ' Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'Saber Token',
                         address: 'Saber2gLauYim4Mvftnrasomsv6NvAuncvMEZwcLpD1',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '',
+                    },
                 ],
             },
         },

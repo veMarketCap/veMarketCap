@@ -1,11 +1,3 @@
-import {
-    CONTRACTS,
-    DATA_AVAILABILITY,
-    EXITS,
-    FORCE_TRANSACTIONS,
-    OPERATOR,
-    STATE_CORRECTNESS,
-} from './common'
 import { Project } from './types'
 
 export const pickle: Project = {

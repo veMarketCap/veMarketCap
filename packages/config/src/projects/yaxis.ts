@@ -41,9 +41,25 @@ export const yAxis: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'yAxis',
+                        name: 'Gauge Controller',
+                        address: '',
+                    },
+                    {
+                        name: 'Voting Escrow (veYAXIS Token)',
+                        address: '0x66b4c0daa0c65ed1eae84b4d738b9572a79389c4',
+                    },
+                    {
+                        name: 'Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'YAXIS Token',
                         address: '0x0ada190c81b814548ddc2f6adc4a689ce7c1fe73',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '',
+                    },
                 ],
             }
         },

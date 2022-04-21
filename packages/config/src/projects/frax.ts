@@ -35,11 +35,11 @@ export const frax: Project = {
                 addresses: [
                     {
                         name: 'Gauge Proxy',
-                        address: '',
+                        address: '0x278dC748edA1d8eFEf1aDFB518542612b49Fcd34',
                     },
                     {
                         name: 'Gauge Controller',
-                        address: '',
+                        address: '0x3669C421b77340B2979d1A00a792CC2ee0FcE737',
                     },
                     {
                         name: 'Voting Escrow (veFXS Token)',

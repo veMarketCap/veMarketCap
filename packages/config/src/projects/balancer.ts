@@ -47,7 +47,7 @@ export const balancer: Project = {
                     },
                     {
                         name: 'Minter',
-                        address: '',
+                        address: '0x239e55F427D44C3cc793f49bFB507ebe76638a2b',
                     },
                     {
                         name: 'BAL Token',

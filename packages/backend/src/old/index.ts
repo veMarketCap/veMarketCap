@@ -15,6 +15,8 @@ let velocked: any = []
 let vecontract: any = []
 let veTotalSupply: any = []
 let lockedUpPercentage: any = []
+let tokenPrice: any = []
+
 const coinNames: Array<string> = projects.map((e: any) => e.slug);
 const datatypes: Array<string> = ["date", "usd", "eth"];
 const projectData: any = {
@@ -45,6 +47,7 @@ const fetchVetokenData = async () => {
     const velockedUpPercentage: any = []
     const topHoldersArr: Array<string> = []
     const totalSupply: Array<string> = []
+    const tokenPriceUsd: Array<string> = []
     coinNames.forEach((coin, index) => {
         const found = projects.find((project: any) => project.name.toLowerCase() === coin.toLowerCase())
         // console.log(found?.name)
@@ -59,6 +62,7 @@ const fetchVetokenData = async () => {
         velockedUpPercentage.push(((found?.veTotalSupply / found?.circulationSupply) * 100) || 0)
         topHoldersArr.push(found?.topHolders || 0)
         totalSupply.push(found?.veTotalSupply || 0)
+        tokenPriceUsd.push(found?.tokenPriceUsd || 0)
     })
 
     veTokenProjects = mcapTvlArr
@@ -68,6 +72,7 @@ const fetchVetokenData = async () => {
     lockedUpPercentage = velockedUpPercentage
     topHolders = topHoldersArr
     veTotalSupply = totalSupply
+    tokenPrice = tokenPriceUsd
 }
 
 // const fetchCurveMarketData = async () => {
@@ -96,7 +101,8 @@ const data = (coinData: any, index: number) => {
         lockedUpPercentage: lockedUpPercentage[index],
         vecontract: vecontract[index],
         topHolders: topHolders[index],
-        veTotalSupply: veTotalSupply[index]
+        veTotalSupply: veTotalSupply[index],
+        tokenPrice: tokenPrice[index]
     }
 }
 

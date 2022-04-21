@@ -48,9 +48,25 @@ export const platypus: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Platypus',
+                        name: 'Gauge Controller',
+                        address: '',
+                    },
+                    {
+                        name: 'Voting Escrow (vePTP Token)',
+                        address: '0x5857019c749147EEE22b1Fe63500F237F3c1B692',
+                    },
+                    {
+                        name: ' Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'PTP Token',
                         address: '0x22d4002028f537599bE9f666d1c4Fa138522f9c8',
-                    }
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '',
+                    },
                 ],
             },
         },

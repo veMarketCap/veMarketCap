@@ -42,9 +42,25 @@ export const spiritSwap: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'SpiritSwap',
-                        address: '0x635be83d56FE9B6a9F9A232f8d051eFf9A415f13',
-                    }
+                        name: 'Gauge Controller',
+                        address: '',
+                    },
+                    {
+                        name: 'Voting Escrow (inSPIRIT Token)',
+                        address: '0x2fbff41a9efaeae77538bd63f1ea489494acdc08',
+                    },
+                    {
+                        name: ' Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'SPIRIT Token',
+                        address: '0x5cc61a78f164885776aa610fb0fe1257df78e59b',
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0x18CeF75C2b032D7060e9Cf96F29aDF74a9a17ce6',
+                    },
                 ],
             }
         },

@@ -41,9 +41,25 @@ export const LiquidDriver: Project = {
             contracts: {
                 addresses: [
                     {
-                        name: 'Liquid Driver',
+                        name: 'Gauge Controller',
                         address: '0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9',
-                    }
+                    },
+                    {
+                        name: 'Voting Escrow (xLQDR Token)',
+                        address: '0x3Ae658656d1C526144db371FaEf2Fff7170654eE',
+                    },
+                    {
+                        name: 'Minter',
+                        address: '',
+                    },
+                    {
+                        name: 'LQDR Token',
+                        address: '0x10b620b2dbac4faa7d7ffd71da486f5d44cd86f9',
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0x326236f487aC37Fc2CB69569b20173e9ccF639C9',
+                    },
                 ],
             },
         },
