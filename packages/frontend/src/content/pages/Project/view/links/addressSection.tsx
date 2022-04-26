@@ -4,8 +4,8 @@ import {ProjectLinks} from '@vemarketcap/config'
 import React from 'react'
 
 import {ExperimentalStats, ExperimentalStatsProps} from './ExperimentalStats'
-import {LinkSectionLinks} from './LinkSectionLinks'
 import {LinkSectionLink} from "./LinkSectionLink";
+import {LinkSectionLinks} from './LinkSectionLinks'
 
 export interface AddressSectionProps {
     name: string
@@ -31,7 +31,7 @@ export function AddressSection(props: AddressSectionProps) {
                                 </th>
                                 <td>
                                     {address ? <a href={`https://etherscan.io/address/${address}`}
-                                                  target={'_blank'}>{address.slice(0, 9)}.....{address.slice(-9, -1)}</a> : ''}
+                                                  target={'_blank'}>{address.slice(0, 5)}.....{address.slice(-6, -1)}</a> : ''}
                                 </td>
                             </tr>
                         )

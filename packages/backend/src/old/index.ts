@@ -1,8 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
+// import {createClient} from 'urql'
+import { createClient,gql } from '@urql/core';
 import {projects} from '@vemarketcap/config'
 import axios, {AxiosError} from "axios";
 import fs from 'fs'
+import 'isomorphic-unfetch';
 
 import {calculateAggregate} from './helpers'
 // import {getTvl} from "./helpers/updateProjectTvl";
@@ -19,9 +22,38 @@ let tokenPrice: any = []
 
 const coinNames: Array<string> = projects.map((e: any) => e.slug);
 const datatypes: Array<string> = ["date", "usd", "eth"];
+const APIURL: any = 'https://api.thegraph.com/subgraphs/name/jaqensyrio/vemarketcap'
+
 const projectData: any = {
     "byProject": {}
 }
+
+const query = `
+    query {
+      weeklyRevenues {
+        id
+        protocol {
+          token {
+            name
+          }
+          veAsset {
+            name
+          }
+        }
+        amount
+    }
+}
+`
+
+const client = createClient({
+    url: APIURL
+})
+const getQuery = async () => {
+    const res = await client.query(query).toPromise()
+    console.log(res.data)
+}
+
+getQuery()
 
 const fetchDefillamaData = async () => {
     // const a = await getTvl()
