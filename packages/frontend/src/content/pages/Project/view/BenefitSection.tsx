@@ -6,7 +6,7 @@ import {Section} from './Section'
 export interface BenefitSectionProps {
     editLink: string
     issueLink: string
-    benefits: string
+    benefits: Array<string> | string
     warning?: string
 }
 
