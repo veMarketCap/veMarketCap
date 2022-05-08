@@ -17,6 +17,8 @@ export function getTechnology(project: Project) {
       return { abbreviation: 'STC', name }
     case 'Yield':
       return { abbreviation: 'YLD', name }
+    case 'CDP':
+      return { abbreviation: 'CDP', name }
     case 'Options':
       return { abbreviation: 'OPT', name }
   }

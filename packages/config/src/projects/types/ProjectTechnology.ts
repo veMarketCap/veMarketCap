@@ -19,3 +19,4 @@ export type ProjectCategory =
   | 'Interest Rate'
   | 'Derivatives'
   | 'Options'
+  | 'CDP'

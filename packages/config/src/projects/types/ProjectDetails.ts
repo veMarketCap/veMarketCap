@@ -7,7 +7,7 @@ export interface ProjectDetails {
   /** status of integration */
   status: string
   /** benefits decription */
-  benefits: string
+  benefits: string | Array<string>
   /** voting decription */
   voting: string
   /** Gauge Weights decription */

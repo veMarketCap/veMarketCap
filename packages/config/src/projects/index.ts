@@ -20,6 +20,7 @@ import {Project} from './types'
 import {stakeDAO} from "./stakeDAO";
 import {yAxis} from './yaxis'
 import {yearn} from './yearn'
+import {yetiFinance} from './yetiFinance'
 
 export * from './types'
 
@@ -44,5 +45,6 @@ export const projects: Project[] = [
     spiritSwap,
     stakeDAO,
     yAxis,
-    yearn
+    yearn,
+    yetiFinance
 ]
