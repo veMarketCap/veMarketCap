@@ -11,6 +11,12 @@ export interface BenefitSectionProps {
 }
 
 export function BenefitSection(props: BenefitSectionProps) {
+    let benefit: Array<string>
+    if (typeof props.benefits === "string") {
+        benefit = [props.benefits]
+    } else {
+        benefit = props.benefits
+    }
     return (
         <Section
             title="Benefits"
@@ -25,7 +31,9 @@ export function BenefitSection(props: BenefitSectionProps) {
                     {props.warning}
                 </div>
             )}
-            <p className="DescriptionSection-Text">{props.benefits}</p>
+            {benefit.map(e => {
+                return <p className="DescriptionSection-Text">{e}</p>
+            })}
         </Section>
     )
 }
