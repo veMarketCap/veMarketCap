@@ -9,6 +9,7 @@ import {LinkSectionLinks} from './LinkSectionLinks'
 
 export interface AddressSectionProps {
     name: string
+    slug: string
     addresses: Array<string>
 }
 

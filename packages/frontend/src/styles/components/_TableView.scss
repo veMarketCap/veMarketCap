@@ -84,6 +84,36 @@
   }
 }
 
+.TableView-Table-topHolders {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+
+  th,
+  td {
+    padding: 8px 8px 8px 0;
+    height: 38px;
+    overflow-y: hidden;
+
+    @media (max-width: 1000px) {
+      height: 36px;
+    }
+
+    &:first-child {
+      width: 37px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &.right {
+      text-align: right;
+    }
+  }
+
+}
+
 .TableView-Body {
   tr {
     border-bottom: 1px solid var(--background-3);
@@ -95,5 +125,10 @@
   }
 }
 
-.mb-0 { margin-bottom: 0;}
-.ma-0 { margin: 0;}
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.ma-0 {
+  margin: 0;
+}

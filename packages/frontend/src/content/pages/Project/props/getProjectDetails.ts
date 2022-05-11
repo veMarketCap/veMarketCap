@@ -21,6 +21,8 @@ export function getProjectDetails(
   return {
     linkSection: getLinkSection(project, l2Data),
     descriptionSection: getDescriptionSection(project),
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     riskSection: getRiskSection(project),
     benefitSection: getBenefitSection(project),
     votingSection: getVotingSection(project),

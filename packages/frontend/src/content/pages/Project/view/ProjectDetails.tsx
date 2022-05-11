@@ -28,6 +28,7 @@ export interface ProjectDetailsProps {
 }
 
 export function ProjectDetails(props: ProjectDetailsProps) {
+    // console.log(props.addressSection.slug)
     return (
         <main className="ProjectDetails">
             <LinkSection {...props.linkSection} />
@@ -45,7 +46,8 @@ export function ProjectDetails(props: ProjectDetailsProps) {
                 {/*))}*/}
                 {/*<ContractsSection {...props.contractsSection} />*/}
             </div>
-            {/*<ReferencesSection {...props.referencesSection} />*/}
+            {/*<ReferencesSection {...props.referencesSection} />*/
+            }
         </main>
     )
 }
