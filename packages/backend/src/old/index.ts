@@ -50,7 +50,7 @@ const client = createClient({
 })
 const getQuery = async () => {
     const res = await client.query(query).toPromise()
-    console.log(res.data)
+    // console.log(res.data)
 }
 
 getQuery()

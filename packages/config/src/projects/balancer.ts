@@ -55,7 +55,7 @@ export const balancer: Project = {
                     },
                     {
                         name: 'Fee Distributor',
-                        address: '',
+                        address: '0x26743984e3357eFC59f2fd6C1aFDC310335a61c9',
                     },
                 ],
             },

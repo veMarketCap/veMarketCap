@@ -1,4 +1,4 @@
-import { Project } from './types'
+import {Project} from './types'
 
 export const stakeDAO: Project = {
     name: 'StakeDAO',
@@ -36,7 +36,15 @@ export const stakeDAO: Project = {
                     {
                         name: 'Stake DAO Token',
                         address: '0x73968b9a57c6e53d41345fd57a6e6ae27d6cdb2f',
-                    }
+                    },
+                    {
+                        name: 'Voting Escrow (veSDT Token)',
+                        address: '0x0C30476f66034E11782938DF8e4384970B6c9e8a',
+                    },
+                    {
+                        name: 'Fee Distributor',
+                        address: '0x29f3dd38dB24d3935CF1bf841e6b2B461A3E5D92',
+                    },
                 ],
             },
         },
