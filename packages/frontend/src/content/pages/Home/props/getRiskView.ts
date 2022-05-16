@@ -30,6 +30,7 @@ export function getRiskViewEntry(
     lockedUpPercentage: projectData.lockedUpPercentage,
     vecontract: projectData.vecontract,
     status: project.details.status,
-    veTotalSupply: projectData.veTotalSupply
+    veTotalSupply: projectData.veTotalSupply,
+    revenue: projectData.revenue
   }
 }

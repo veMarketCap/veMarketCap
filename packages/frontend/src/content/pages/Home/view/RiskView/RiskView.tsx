@@ -20,6 +20,7 @@ export interface RiskViewEntry {
     vecontract: string
     status: string
     veTotalSupply: string
+    revenue: string
 }
 
 export function RiskView({items}: RiskViewProps) {
@@ -76,6 +77,15 @@ export function RiskView({items}: RiskViewProps) {
                 }
                 return project.holdersCount
             }
+        },
+        {
+            name: 'Revenue',
+            getValue: (project) => {
+                if (project.revenue == '0') {
+                    return '?'
+                }
+                return convertNumber(project.revenue, 2)
+            },
         },
         // {
         //     name: 'veContract',
