@@ -16,7 +16,8 @@ export interface ProjectData {
   lockedUpPercentage: string
   vecontract: string
   veTotalSupply: string,
-  revenue: string
+  revenue: string,
+  tokenPrice: string
 }
 
 export interface ChartData {

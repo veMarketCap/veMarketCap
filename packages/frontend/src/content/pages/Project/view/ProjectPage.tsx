@@ -20,7 +20,6 @@ export interface ProjectPageProps {
 }
 
 export function ProjectPage(props: ProjectPageProps) {
-    console.log(props.projectDetails.addressSection.slug)
     const link = `/top-holders/${props.projectDetails.addressSection.slug}/`
 
     return (

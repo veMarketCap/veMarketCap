@@ -31,6 +31,7 @@ export function getRiskViewEntry(
     vecontract: projectData.vecontract,
     status: project.details.status,
     veTotalSupply: projectData.veTotalSupply,
-    revenue: projectData.revenue
+    revenue: projectData.revenue,
+    tokenPrice: projectData.tokenPrice
   }
 }

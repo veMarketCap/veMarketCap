@@ -1,10 +1,11 @@
+import {ethers} from "ethers";
 import React from 'react'
 
-import {OptimismIcon, StarkWareIcon} from '../../../../common/icons'
-import {FinancialViewEntry} from "../FinancialView/FinancialView";
+// import {OptimismIcon, StarkWareIcon} from '../../../../common/icons'
+// import {FinancialViewEntry} from "../FinancialView/FinancialView";
 import {ProjectLink} from '../ProjectLink'
 import {Column, TableView} from '../TableView'
-import {RiskCell} from './RiskCell'
+// import {RiskCell} from './RiskCell'
 
 export interface RiskViewProps {
     items: RiskViewEntry[]
@@ -21,6 +22,7 @@ export interface RiskViewEntry {
     status: string
     veTotalSupply: string
     revenue: string
+    tokenPrice: string
 }
 
 export function RiskView({items}: RiskViewProps) {
@@ -81,10 +83,11 @@ export function RiskView({items}: RiskViewProps) {
         {
             name: 'Revenue',
             getValue: (project) => {
+                const revenueUSD = (parseFloat(ethers.utils.formatEther(project.revenue))*(parseFloat(project.tokenPrice)))
                 if (project.revenue == '0') {
                     return '?'
                 }
-                return convertNumber(project.revenue, 2)
+                return convertNumber(revenueUSD.toFixed(2), 2)
             },
         },
         // {
