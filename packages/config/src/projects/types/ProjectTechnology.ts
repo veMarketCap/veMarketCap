@@ -20,3 +20,5 @@ export type ProjectCategory =
   | 'Derivatives'
   | 'Options'
   | 'CDP'
+  | 'Algo-Stables'
+  | 'Cross Chain'

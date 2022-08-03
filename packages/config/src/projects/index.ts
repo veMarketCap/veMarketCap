@@ -10,6 +10,7 @@ import {frax} from './frax'
 import {hundred} from './hundred'
 import {idleFinance} from './idleFinance'
 import {LiquidDriver} from './liquidDriver'
+import {originDollar} from './originDollar'
 import {pickle} from './pickle'
 import {platypus} from './platypus'
 import {ribbon} from './ribbon'
@@ -18,6 +19,8 @@ import {snowball} from './snowball'
 import {spiritSwap} from './spiritSwap'
 import {Project} from './types'
 import {stakeDAO} from "./stakeDAO";
+import {stargate} from "./stargate";
+import {wild} from "./wildCredit";
 import {yAxis} from './yaxis'
 import {yearn} from './yearn'
 import {yetiFinance} from './yetiFinance'
@@ -25,26 +28,29 @@ import {yetiFinance} from './yetiFinance'
 export * from './types'
 
 export const projects: Project[] = [
-    _88mph,
-    angle,
-    apwine,
-    balancer,
-    creditum,
-    curve,
-    dydx,
-    frax,
-    // glow,
-    hundred,
-    idleFinance,
-    LiquidDriver,
-    pickle,
-    platypus,
-    ribbon,
-    saber,
-    snowball,
-    spiritSwap,
-    stakeDAO,
-    yAxis,
-    yearn,
-    yetiFinance
+  _88mph,
+  angle,
+  apwine,
+  balancer,
+  creditum,
+  curve,
+  dydx,
+  frax,
+  // glow,
+  hundred,
+  idleFinance,
+  LiquidDriver,
+  originDollar,
+  pickle,
+  platypus,
+  ribbon,
+  saber,
+  snowball,
+  spiritSwap,
+  stakeDAO,
+  stargate,
+  wild,
+  yAxis,
+  yearn,
+  yetiFinance
 ]
