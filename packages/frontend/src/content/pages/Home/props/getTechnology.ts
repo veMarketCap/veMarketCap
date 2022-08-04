@@ -21,5 +21,9 @@ export function getTechnology(project: Project) {
       return { abbreviation: 'CDP', name }
     case 'Options':
       return { abbreviation: 'OPT', name }
+    case 'Algo-Stables':
+      return { abbreviation: 'AS', name }
+    case 'Cross Chain':
+      return { abbreviation: 'Cross Chain', name }
   }
 }
