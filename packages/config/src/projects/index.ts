@@ -20,7 +20,6 @@ import {spiritSwap} from './spiritSwap'
 import {Project} from './types'
 import {stakeDAO} from "./stakeDAO";
 import {stargate} from "./stargate";
-import {wild} from "./wildCredit";
 import {yAxis} from './yaxis'
 import {yearn} from './yearn'
 import {yetiFinance} from './yetiFinance'
@@ -49,7 +48,6 @@ export const projects: Project[] = [
   spiritSwap,
   stakeDAO,
   stargate,
-  wild,
   yAxis,
   yearn,
   yetiFinance

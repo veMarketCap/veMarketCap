@@ -9,7 +9,7 @@ import {
 import { Project } from './types'
 
 export const originDollar: Project = {
-    name: 'Origin Dollar (OUSD)',
+    name: 'Origin Dollar',
     slug: 'origin-dollar',
     bridges: [],
     associatedTokens: [],
