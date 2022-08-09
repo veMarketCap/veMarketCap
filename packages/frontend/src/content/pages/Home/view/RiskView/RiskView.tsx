@@ -1,10 +1,11 @@
+import {ethers} from "ethers";
 import React from 'react'
 
-import {OptimismIcon, StarkWareIcon} from '../../../../common/icons'
-import {FinancialViewEntry} from "../FinancialView/FinancialView";
+// import {OptimismIcon, StarkWareIcon} from '../../../../common/icons'
+// import {FinancialViewEntry} from "../FinancialView/FinancialView";
 import {ProjectLink} from '../ProjectLink'
 import {Column, TableView} from '../TableView'
-import {RiskCell} from './RiskCell'
+// import {RiskCell} from './RiskCell'
 
 export interface RiskViewProps {
     items: RiskViewEntry[]
@@ -20,6 +21,12 @@ export interface RiskViewEntry {
     vecontract: string
     status: string
     veTotalSupply: string
+    revenue: string
+    tokenPrice: string
+    technology: {
+        abbreviation: string
+        name: string
+    },
 }
 
 export function RiskView({items}: RiskViewProps) {
@@ -64,15 +71,16 @@ export function RiskView({items}: RiskViewProps) {
             name: 'Name',
             getValue: (project) => <ProjectLink project={project}/>
         },
-        // {
-        //     name: 'Locked Value/TVL',
-        //     alignRight: true,
-        //     getValue: (project) => project.lockedValueByTVL,
-        // },
         {
-            name: 'veLocked',
-            getValue: (project) => convertNumber(project.velocked, 2),
+            name: 'Type',
+            shortName: 'Tech',
+            // alignRight: true,
+            getValue: (project) => project.technology.name,
         },
+        // {
+        //     name: 'veLocked',
+        //     getValue: (project) => convertNumber(project.velocked, 2),
+        // },
         {
             name: 'Holders Count',
             getValue: (project) => {
@@ -82,47 +90,44 @@ export function RiskView({items}: RiskViewProps) {
                 return project.holdersCount
             }
         },
-        {
-            name: 'Total Supply',
-            getValue: (project) => convertNumber(project.veTotalSupply, 2),
-        },
         // {
-        //     name: 'locked up%',
+        //     name: 'Revenue',
         //     getValue: (project) => {
-        //         if (project.lockedUpPercentage == null || project.lockedUpPercentage == '0') {
+        //         const revenueUSD = parseFloat(ethers.utils.formatEther(project.revenue))*(parseFloat(project.tokenPrice))
+        //         if (project.revenue == '0') {
         //             return '?'
         //         }
-        //         return parseFloat(project.lockedUpPercentage).toFixed(4)
+        //         return convertNumber(revenueUSD.toFixed(2), 2)
         //     },
         // },
-        {
-            name: 'veContract',
-            getValue: (project) => {
-                let url
-                const seperator = project.vecontract.toString().split(':')
-                if (project.vecontract.toString().includes('solana')) {
-                    url = `https://solscan.io/account/${seperator[1]}`;
-                } else if (project.vecontract.toString().includes('avax')) {
-                    // const seperator = project.vecontract.split(':')
-                    url = `https://snowtrace.io/address/${seperator[1]}`;
-                } else if (project.vecontract.toString().includes('fantom')) {
-                    // const seperator = project.vecontract.split(':')
-                    url = `https://ftmscan.com/address/${seperator[1]}`;
-                } else if (project.vecontract.toString().includes('arb')) {
-                    // const seperator = project.vecontract.split(':')
-                    url = `https://arbiscan.io/address/${seperator[1]}`;
-                } else {
-                    url = `https://etherscan.io/address/${project.vecontract}`
-                }
-                if (project.vecontract.toString().includes(':')) {
-                    return <a href={url} target={"_blank"}>{(project.vecontract.toString().split(':')[1]).slice(0, 5)}...{(project.vecontract.toString().split(':')[1]).slice(-5, -1)}</a>
-                } else if (project.vecontract == '0') {
-                    return <a href={'#'} target={"_blank"} style={{textDecoration: 'none'}}>{project.vecontract}</a>
-                } else {
-                    return <a href={url} target={"_blank"}>{project.vecontract.toString().slice(0, 5)}...{project.vecontract.toString().slice(-5, -1)}</a>
-                }
-            },
-        },
+        // {
+        //     name: 'veContract',
+        //     getValue: (project) => {
+        //         let url
+        //         const seperator = project.vecontract.toString().split(':')
+        //         if (project.vecontract.toString().includes('solana')) {
+        //             url = `https://solscan.io/account/${seperator[1]}`;
+        //         } else if (project.vecontract.toString().includes('avax')) {
+        //             // const seperator = project.vecontract.split(':')
+        //             url = `https://snowtrace.io/address/${seperator[1]}`;
+        //         } else if (project.vecontract.toString().includes('fantom')) {
+        //             // const seperator = project.vecontract.split(':')
+        //             url = `https://ftmscan.com/address/${seperator[1]}`;
+        //         } else if (project.vecontract.toString().includes('arb')) {
+        //             // const seperator = project.vecontract.split(':')
+        //             url = `https://arbiscan.io/address/${seperator[1]}`;
+        //         } else {
+        //             url = `https://etherscan.io/address/${project.vecontract}`
+        //         }
+        //         if (project.vecontract.toString().includes(':')) {
+        //             return <a href={url} target={"_blank"}>{(project.vecontract.toString().split(':')[1]).slice(0, 5)}...{(project.vecontract.toString().split(':')[1]).slice(-5, -1)}</a>
+        //         } else if (project.vecontract == '0') {
+        //             return <a href={'#'} target={"_blank"} style={{textDecoration: 'none'}}>{project.vecontract}</a>
+        //         } else {
+        //             return <a href={url} target={"_blank"}>{project.vecontract.toString().slice(0, 5)}...{project.vecontract.toString().slice(-5, -1)}</a>
+        //         }
+        //     },
+        // },
     ]
     const filteredItems = items.filter(item => item.status == 'On' && item.name !== 'Saber' && item.holdersCount !== '0' && item.velocked.toString() !== '0')
     return (

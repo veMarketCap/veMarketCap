@@ -1,10 +1,9 @@
 import l2Data from "@vemarketcap/backend";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import { Project } from '@vemarketcap/config'
 
 import { ChartData, L2Data, ProjectData } from '../../../L2Data'
 import { RiskViewEntry, RiskViewProps } from '../view/RiskView/RiskView'
+import {getTechnology} from "./getTechnology";
 
 export function getRiskView(
     projects: Project[],
@@ -30,6 +29,9 @@ export function getRiskViewEntry(
     lockedUpPercentage: projectData.lockedUpPercentage,
     vecontract: projectData.vecontract,
     status: project.details.status,
-    veTotalSupply: projectData.veTotalSupply
+    veTotalSupply: projectData.veTotalSupply,
+    revenue: projectData.revenue,
+    tokenPrice: projectData.tokenPrice,
+    technology: getTechnology(project),
   }
 }

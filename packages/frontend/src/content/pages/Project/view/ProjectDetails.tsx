@@ -1,30 +1,25 @@
 import React from 'react'
 
 import {BenefitSection, BenefitSectionProps} from './BenefitSection'
-import {ContractsSection, ContractsSectionProps} from './ContractsSection'
+// import {ContractsSection, ContractsSectionProps} from './ContractsSection'
 import {
     DescriptionSection,
     DescriptionSectionProps,
 } from './DescriptionSection'
 import {GaugeWeightSection, GaugeWeightSectionProps} from './GaugeWeightSection'
-import {LinkSection, LinkSectionProps} from './links/LinkSection'
-import {NewsSection, NewsSectionProps} from './NewsSection'
-import {ReferencesSection, ReferencesSectionProps} from './ReferencesSection'
-import {RewardSection, RewardSectionProps} from './RewardSection'
-import {RiskSection, RiskSectionProps} from './RiskSection'
-import {TechnologyIncomplete, TechnologyIncompleteProps} from './TechnologyIncomplete'
-import {TechnologySection, TechnologySectionProps} from './TechnologySection'
-import {VotingSection, VotingSectionProps} from './VotingSection'
 import {AddressSection, AddressSectionProps} from "./links/addressSection";
+import {LinkSection, LinkSectionProps} from './links/LinkSection'
+// import {NewsSection, NewsSectionProps} from './NewsSection'
+// import {ReferencesSection, ReferencesSectionProps} from './ReferencesSection'
+import {RewardSection, RewardSectionProps} from './RewardSection'
+// import {RiskSection, RiskSectionProps} from './RiskSection'
+// import {TechnologyIncomplete, TechnologyIncompleteProps} from './TechnologyIncomplete'
+// import {TechnologySection, TechnologySectionProps} from './TechnologySection'
+import {VotingSection, VotingSectionProps} from './VotingSection'
 
 export interface ProjectDetailsProps {
     linkSection: LinkSectionProps
     descriptionSection: DescriptionSectionProps
-    riskSection: RiskSectionProps
-    incomplete?: TechnologyIncompleteProps
-    sections: TechnologySectionProps[]
-    contractsSection: ContractsSectionProps
-    referencesSection: ReferencesSectionProps
     benefitSection: BenefitSectionProps
     votingSection: VotingSectionProps
     gaugeWeightSection: GaugeWeightSectionProps
@@ -50,7 +45,8 @@ export function ProjectDetails(props: ProjectDetailsProps) {
                 {/*))}*/}
                 {/*<ContractsSection {...props.contractsSection} />*/}
             </div>
-            <ReferencesSection {...props.referencesSection} />
+            {/*<ReferencesSection {...props.referencesSection} />*/
+            }
         </main>
     )
 }

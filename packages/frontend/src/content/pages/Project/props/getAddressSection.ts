@@ -14,5 +14,6 @@ export function getAddressSection(
     // @ts-ignore
     addresses: project.details.technology.contracts.addresses,
     name: project.name,
+    slug: project.slug
   }
 }

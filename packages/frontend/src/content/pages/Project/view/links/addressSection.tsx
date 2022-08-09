@@ -4,11 +4,12 @@ import {ProjectLinks} from '@vemarketcap/config'
 import React from 'react'
 
 import {ExperimentalStats, ExperimentalStatsProps} from './ExperimentalStats'
-import {LinkSectionLinks} from './LinkSectionLinks'
 import {LinkSectionLink} from "./LinkSectionLink";
+import {LinkSectionLinks} from './LinkSectionLinks'
 
 export interface AddressSectionProps {
     name: string
+    slug: string
     addresses: Array<string>
 }
 
