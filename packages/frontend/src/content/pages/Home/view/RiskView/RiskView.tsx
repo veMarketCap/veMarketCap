@@ -23,6 +23,10 @@ export interface RiskViewEntry {
     veTotalSupply: string
     revenue: string
     tokenPrice: string
+    technology: {
+        abbreviation: string
+        name: string
+    },
 }
 
 export function RiskView({items}: RiskViewProps) {
@@ -68,9 +72,15 @@ export function RiskView({items}: RiskViewProps) {
             getValue: (project) => <ProjectLink project={project}/>
         },
         {
-            name: 'veLocked',
-            getValue: (project) => convertNumber(project.velocked, 2),
+            name: 'Type',
+            shortName: 'Tech',
+            // alignRight: true,
+            getValue: (project) => project.technology.name,
         },
+        // {
+        //     name: 'veLocked',
+        //     getValue: (project) => convertNumber(project.velocked, 2),
+        // },
         {
             name: 'Holders Count',
             getValue: (project) => {

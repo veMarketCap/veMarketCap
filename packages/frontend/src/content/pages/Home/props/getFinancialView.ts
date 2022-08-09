@@ -82,6 +82,7 @@ function getFinancialViewEntry(
     purpose: project.details.purpose,
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
+    veLocked: projectData.velocked,
     technology: getTechnology(project),
     status: project.details.status,
     chains: projectData.chains,

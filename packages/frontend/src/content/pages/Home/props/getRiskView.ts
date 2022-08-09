@@ -5,6 +5,7 @@ import { Project } from '@vemarketcap/config'
 
 import { ChartData, L2Data, ProjectData } from '../../../L2Data'
 import { RiskViewEntry, RiskViewProps } from '../view/RiskView/RiskView'
+import {getTechnology} from "./getTechnology";
 
 export function getRiskView(
     projects: Project[],
@@ -32,6 +33,7 @@ export function getRiskViewEntry(
     status: project.details.status,
     veTotalSupply: projectData.veTotalSupply,
     revenue: projectData.revenue,
-    tokenPrice: projectData.tokenPrice
+    tokenPrice: projectData.tokenPrice,
+    technology: getTechnology(project),
   }
 }
