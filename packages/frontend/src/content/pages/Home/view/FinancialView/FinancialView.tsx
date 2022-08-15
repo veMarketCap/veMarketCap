@@ -91,11 +91,11 @@ export function FinancialView({items}: FinancialViewProps) {
             alignRight: true,
             getValue: (project) => <PercentChange value={project.sevenDayChange}/>,
         },
-        {
-            name: 'veLocked',
-            alignRight: true,
-            getValue: (project) => convertNumber(project.veLocked, 2),
-        },
+        // {
+        //     name: 'veLocked',
+        //     alignRight: true,
+        //     getValue: (project) => convertNumber(project.veLocked, 2),
+        // },
         // {
         //     name: 'Type',
         //     shortName: 'Tech',
