@@ -94,7 +94,7 @@ export function FinancialView({items}: FinancialViewProps) {
         // {
         //     name: 'veLocked',
         //     alignRight: true,
-        //     getValue: (project) => convertNumber(project.veLocked, 2),
+        //     getValue: (project) => convertNumber(project.veLocked, 2)
         // },
         // {
         //     name: 'Type',

@@ -1,6 +1,4 @@
 import l2Data from "@vemarketcap/backend";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import { Project } from '@vemarketcap/config'
 
 import { ChartData, L2Data, ProjectData } from '../../../L2Data'

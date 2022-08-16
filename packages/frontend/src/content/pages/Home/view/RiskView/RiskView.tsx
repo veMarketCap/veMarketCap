@@ -101,6 +101,16 @@ export function RiskView({items}: RiskViewProps) {
             },
         },
         // {
+        //     name: 'Revenue',
+        //     getValue: (project) => {
+        //         const revenueUSD = parseFloat(ethers.utils.formatEther(project.revenue))*(parseFloat(project.tokenPrice))
+        //         if (project.revenue == '0') {
+        //             return '?'
+        //         }
+        //         return convertNumber(revenueUSD.toFixed(2), 2)
+        //     },
+        // },
+        // {
         //     name: 'veContract',
         //     getValue: (project) => {
         //         let url
