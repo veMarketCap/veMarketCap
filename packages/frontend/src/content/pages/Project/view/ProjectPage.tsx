@@ -26,11 +26,11 @@ export function ProjectPage(props: ProjectPageProps) {
         <Page metadata={props.metadata} preloadApi={props.chart.endpoint}>
             <Navbar/>
             <Header {...props.header} />&nbsp;
-            <div>
-                <a href={link}>
-                    <button>Top Holder page</button>
-                </a>
-            </div>
+            {/*<div>*/}
+            {/*    <a href={link}>*/}
+            {/*        <button>Top Holder page</button>*/}
+            {/*    </a>*/}
+            {/*</div>*/}
             <Chart {...props.chart} />
             <ProjectDetails {...props.projectDetails} />
             <Footer/>

@@ -11,6 +11,7 @@ import {hundred} from './hundred'
 import {idleFinance} from './idleFinance'
 import {LiquidDriver} from './liquidDriver'
 import {originDollar} from './originDollar'
+import {perp} from './perp'
 import {pickle} from './pickle'
 import {platypus} from './platypus'
 import {ribbon} from './ribbon'
@@ -40,6 +41,7 @@ export const projects: Project[] = [
   idleFinance,
   LiquidDriver,
   originDollar,
+  perp,
   pickle,
   platypus,
   ribbon,
